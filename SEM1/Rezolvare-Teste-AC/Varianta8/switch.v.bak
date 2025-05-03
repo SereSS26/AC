@@ -1,0 +1,53 @@
+module switch(
+  input [5:0]	x,
+  input [5:0] y,
+  output reg [2:0] o
+  );
+  
+  integer k;
+  reg ok;
+  reg [5:0] temp_x;
+  reg [5:0] temp_y;
+  always @(*) begin
+    ok=0;
+    temp_x=x;
+    temp_y=y;
+    if(x[5]==y[5])
+      ok=1;
+    if(ok==1)begin
+      for(k=3;k<6;k=k+1)begin
+        temp_x[k]=~temp_x[k];
+      end
+      o=temp_x[5:3];
+    end
+    else begin
+      for(k=0;k<3;k=k+1)begin
+        temp_y[k]=~temp_y[k];
+      end
+      o=temp_y[2:0];
+    end
+  end
+endmodule
+
+module switch_tb;
+  reg [5:0] x;
+  reg [5:0] y;
+  wire [2:0] o;
+  
+  switch uut(
+  .x(x),
+  .y(y),
+  .o(o)
+  );
+  
+  initial begin
+    x = 6'b000000; y = 6'b000000; #10; // Test 1: x ?i y ambele 0
+    x = 6'b100000; y = 6'b100000; #10; // Test 2: Bitul de semn coincide
+    x = 6'b101011; y = 6'b001100; #10; // Test 3: Bitul de semn diferit
+    x = 6'b011101; y = 6'b011001; #10; // Test 4: Bitul de semn coincide
+    x = 6'b111111; y = 6'b011011; #10; // Test 5: Bitul de semn diferit
+    x = 6'b010101; y = 6'b110101; #10; // Test 6: Bitul de semn diferit
+    x = 6'b001011; y = 6'b001001; #10; // Test 7: Bitul de semn coincide
+    $monitor("Input: %b %b, Output: %b", x,y, o);
+  end
+endmodule

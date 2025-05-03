@@ -1,0 +1,105 @@
+module regfl(
+  input clk,
+  input rst_b,
+  input we,
+  input [2:0]s,
+  input [63:0]d,
+  output reg [511:0]q
+);
+  
+reg [63:0] reg_file[7:0];
+integer i;
+
+always @(posedge clk or negedge rst_b) begin
+  if(rst_b==0) begin
+    for(i =0;i<8;i=i+1)
+      reg_file[i] <= 64'h0;
+    end
+  else
+    if(we) begin
+      reg_file[s]<=d;
+    end
+  end
+  
+  always@(*) begin
+    q={reg_file[0],reg_file[1],reg_file[2],reg_file[3],reg_file[4],reg_file[5],reg_file[6]};
+    
+  end
+  
+endmodule
+
+`timescale 1ns/1ps
+
+module regfl_tb;
+  reg clk;
+  reg rst_b;
+  reg we;
+  reg [2:0] s;
+  reg [63:0] d;
+  wire [511:0] q;
+  
+regfl uut (
+  .clk(clk),
+  .rst_b(rst_b),
+  .we(we),
+  .s(s),
+  .d(d),
+  .q(q)
+  );
+  
+task urand64(output reg [63:0] r);
+    begin
+       r[63:32] = $urandom;
+       r[31:0] = $urandom;
+      end
+  endtask
+  
+  always begin
+    #50 clk = ~clk;  
+  end
+  
+initial begin
+  clk=0;
+  rst_b=0;
+  we=0;
+  s=0;
+  d=64'h0;
+
+  #25 rst_b = 1;
+  
+  we = 1;
+  for (s = 0; s < 8; s = s + 1) begin
+     urand64(d);  
+      #100;        
+    end
+    we = 0;
+    
+    #200;
+    $display("Continutul iesirii q: %h", q);
+
+    $finish;
+  end
+
+endmodule
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

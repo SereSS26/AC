@@ -1,0 +1,38 @@
+module fac(
+  input x,
+  input y,
+  input ci,
+  output z,
+  output co
+);
+
+assign z=x^y^ci;
+assign co=(x&y)|(x&ci)|(y&ci);
+
+  
+  endmodule
+  
+  `timescale 1ns/1ps
+  module fac_tb;
+    reg x,y,ci;
+    wire z,co;
+    fac uut(
+    .x(x),
+    .y(y),
+    .ci(ci),
+    .z(z),
+    .co(co)
+    );
+    initial begin
+      x=0;
+      y=0;
+      ci=0;
+    
+    repeat(8) begin
+      #10
+      $display("%b %b  %b  | %b  %b", x, y, ci, z, co);
+       {x,y,ci}={x,y,ci}+1;
+    end
+    
+  end
+  endmodule

@@ -1,0 +1,214 @@
+///EX1
+///a.
+module ex4 (
+	input [5:0] i,
+	output is6
+);
+	always @(*) begin
+	  if(i/10==6)
+	    begin
+	      is6=1'b1;
+	     end
+	     else
+	       is6=1'b0;
+	     end
+	  end
+	 end
+endmodule
+
+///b.
+module ex1b (
+	input a, b, c, d,
+	output f2
+);
+	assign f2=(b&d)|(~c&d)|(a&~b);
+endmodule
+
+module ex1b_tb;
+	reg a, b, c, d;
+	wire f2;
+
+	ex1b ex1b_i (.a(a), .b(b), .c(c), .d(d), .f2(f2));
+
+	integer k;
+	initial begin
+		$display("Time\ta\tb\tc\td\tabcd_10\tf2");
+		$monitor("%0t\t%b\t%b\t%b\t%b\t%0d\t%b", $time, a, b, c, d, {a,b,c,d}, f2);
+		{a, b, c, d} = 0;
+		for (k = 1; k < 16; k = k + 1)
+			#10 {a, b, c, d} = k;
+	end
+endmodule
+
+///c.
+module ex1c (
+	input a, b, c, d,
+	output f3
+);
+	assign f3=(~c&~d)|(b&d);
+endmodule
+
+module ex1c_tb;
+	reg a, b, c, d;
+	wire f3;
+
+	ex1c ex1c_i (.a(a), .b(b), .c(c), .d(d), .f3(f3));
+
+	integer k;
+	initial begin
+		$display("Time\ta\tb\tc\td\tabcd_10\tf3");
+		$monitor("%0t\t%b\t%b\t%b\t%b\t%0d\t%b", $time, a, b, c, d, {a,b,c,d}, f3);
+		{a, b, c, d} = 0;
+		for (k = 1; k < 16; k = k + 1)
+			#10 {a, b, c, d} = k;
+	end
+endmodule
+
+///d.
+module ex1d (
+	input a, b, c, d,
+	output f4
+);
+	assign f4=(~c&d)|(a&b)|(b&~c);
+endmodule
+
+module ex1d_tb;
+	reg a, b, c, d;
+	wire f4;
+
+	ex1d ex1d_i (.a(a), .b(b), .c(c), .d(d), .f4(f4));
+
+	integer k;
+	initial begin
+		$display("Time\ta\tb\tc\td\tabcd_10\tf4");
+		$monitor("%0t\t%b\t%b\t%b\t%b\t%0d\t%b", $time, a, b, c, d, {a,b,c,d}, f4);
+		{a, b, c, d} = 0;
+		for (k = 1; k < 16; k = k + 1)
+			#10 {a, b, c, d} = k;
+	end
+endmodule
+
+///e.
+module ex1e (
+	input a, b, c, d,
+	output f5
+);
+	assign f5=(~a&b)|(b&~d)|(b&~c);
+endmodule
+
+module ex1e_tb;
+	reg a, b, c, d;
+	wire f5;
+
+	ex1e ex1e_i (.a(a), .b(b), .c(c), .d(d), .f5(f5));
+
+	integer k;
+	initial begin
+		$display("Time\ta\tb\tc\td\tabcd_10\tf5");
+		$monitor("%0t\t%b\t%b\t%b\t%b\t%0d\t%b", $time, a, b, c, d, {a,b,c,d}, f5);
+		{a, b, c, d} = 0;
+		for (k = 1; k < 16; k = k + 1)
+			#10 {a, b, c, d} = k;
+	end
+endmodule
+
+///EX2
+module ex2 (
+	input [2:0]i,
+	output reg o
+);
+	///assign o = (i==3'b011)||(i==3'b111);
+	always @(*)begin
+	  if(i == 3'b011 || i == 3'b111)
+	    o = 1;
+	  else
+	    o = 0;
+	 end
+endmodule
+
+module ex2_tb;
+	reg [2:0] i;
+	wire o;
+
+	ex2 ex2_i (.i(i), .o(o));
+
+	integer k;
+	initial begin
+		$display("Time\ti\to");
+		$monitor("%0t\t%b\t%b", $time, i, o);
+		i = 0;
+		for (k = 1; k < 8; k = k + 1)
+			#10 i = k;
+	end
+endmodule
+
+///EX3
+module ex3 (
+	input [3:0] i,
+	output reg [3:0] o
+);
+	always @(*) begin
+	  case(i)
+	    4'b0000: o=4'b0000;
+	    4'b0001: o=4'b0111;
+	    4'b0010: o=4'b0110;
+	    4'b0011: o=4'b0101;
+	    4'b0100: o=4'b0100;
+	    4'b0101: o=4'b1011;
+	    4'b0110: o=4'b1010;
+	    4'b0111: o=4'b1001;
+	    4'b1000: o=4'b1000;
+	    4'b1001: o=4'b1111;
+	    default: o=4'b0000;
+	   endcase
+	  end
+endmodule
+
+module ex3_tb;
+	reg [3:0] i;
+	wire [3:0] o;
+
+	ex3 ex3_i (.i(i), .o(o));
+
+	integer k;
+	initial begin
+		$display("Time\ti\to");
+		$monitor("%0t\t%b\t%b", $time, i, o);
+		i = 0;
+		for (k = 1; k < 10; k = k + 1)
+			#10 i = k;
+	end
+endmodule
+
+///EX4.
+module ex4 (
+	input [5:0] i,
+	output reg is6
+);
+	always @(*) begin
+	  if(i/10==6)
+	    begin
+	      is6=1'b1;
+	  end
+	  else
+	    begin
+	       is6=1'b0;
+	  end
+	end
+endmodule
+
+module ex4_tb;
+	reg [5:0] i;
+	wire is6;
+
+	ex4 ex4_i (.i(i), .is6(is6));
+
+	integer k;
+	initial begin
+		$display("Time\ti\ti_dec\tis6");
+		$monitor("%0t\t%b\t%0d\t%b", $time, i, i, is6);
+		i = 0;
+		for (k = 1; k < 64; k = k + 1)
+			#10 i = k;
+	end
+endmodule

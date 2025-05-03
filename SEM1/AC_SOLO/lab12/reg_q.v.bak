@@ -1,0 +1,33 @@
+module reg_q(
+  input clk, rst_b, clr_lsb, ld_ibus, ld_obus, sh_r,sh_i,
+  input [7:0] ibus,
+  output reg [7:0] obus,
+  output reg [7:0] q
+);
+  always @ (posedge clk, negedge rst_b)begin
+    if(rst_b==0) begin
+      q<=8'b0;
+    end
+  else begin
+      if(ld_ibus==1) begin
+        q<=ibus;
+     end else
+      if(sh_r) begin
+        q<={sh_i,q[7:1]};//shift dreapta si introducem pe sh_i pe cel mai semnif bit
+      end
+      if(clr_lsb) begin
+        q[0]<=1'b0;
+      end      
+              
+  end
+end
+    
+
+  always @ (*) begin
+   if (ld_obus) begin
+      obus = q; 
+    end else begin
+      obus = 8'bz; // High-impedance state când 
+    end
+    end
+endmodule

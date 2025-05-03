@@ -1,0 +1,61 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/home/eda/shared/Laborator5
+vdecoder_1to4
+!s100 ]O__KGY`n0MS3inH@M^@c2
+IJbmNkY:MW8UHgBBj3L6RO1
+V4eCFgHbX=1GjjV7>KlZh91
+w1729529000
+8decoder_1to4.v
+Fdecoder_1to4.v
+L0 1
+Z1 OV;L;6.5b;42
+r1
+!s85 0
+31
+!s101 -O0
+o-O0
+vregfl_4x8
+!s100 agc3zFM5545CziJXQGAH;2
+IHZ8k7Z]N249F1=em9HQeh2
+VHAIRWSQgiC@_SWCF5HXo12
+Z2 w1729279452
+Z3 8regfl_4x8.v
+Z4 Fregfl_4x8.v
+L0 1
+R1
+r1
+!s85 0
+31
+!s101 -O0
+o-O0
+vregfl_4x8_tb
+!s100 ;:f?3[ieVE6]CV8TI8TNk1
+IAMRmf72A8d@OnG1LkWB<A3
+VDUc1U8JXVl04lFWfD3Q8E2
+R2
+R3
+R4
+L0 73
+R1
+r1
+!s85 0
+31
+!s101 -O0
+o-O0
+vrgst
+!s100 VR>VGoQ`HPJ[`@_U<kiBT1
+I0o=BAF=XXz6_d9k0g`LK71
+V<QJ3aCH_?_I6jCVnGAT^G3
+w1729276948
+8rgst.v
+Frgst.v
+L0 1
+R1
+r1
+!s85 0
+31
+!s101 -O0
+o-O0

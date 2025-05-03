@@ -1,0 +1,74 @@
+module fac(
+  input x,
+  input y,
+  input ci,
+  output z,
+  output co
+);
+
+assign z=x^y^ci;
+assign co=(x&y)|(x&ci)|(y&ci);
+
+  
+  endmodule
+
+module add2b (
+  input [1:0] x,    
+  input [1:0] y,    
+  input ci,         
+  output [1:0] s,   
+  output co         
+);
+
+  wire leg;
+   fac fa0 (
+    .x(x[0]),
+    .y(y[0]),
+    .ci(ci),
+    .z(s[0]),
+    .co(leg)
+  );
+
+   fac fa1 (
+    .x(x[1]),
+    .y(y[1]),
+    .ci(leg),
+    .z(s[1]),
+    .co(co)
+  );
+
+endmodule
+
+`timescale 1ns/1ps
+module add2b_tb;
+  reg [1:0] x, y;
+  reg ci;
+  wire [1:0] s;
+  wire co;
+
+   add2b uut (
+    .x(x),
+    .y(y),
+    .ci(ci),
+    .s(s),
+    .co(co)
+  );
+
+  initial begin
+    
+    $display("x   y   ci | s   co");
+
+       x = 2'b00; y = 2'b00; ci = 0;
+    
+   repeat (32) begin
+      #10;        
+      $display("%b  %b  %b  | %b  %b", x, y, ci, s, co);
+      {x, y, ci} = {x, y, ci} + 1;
+    
+    end
+
+    $finish;
+  end
+endmodule
+
+

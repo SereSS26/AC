@@ -1,0 +1,122 @@
+module divby6(
+   input clk,
+   input rst_b,
+   input clr,
+   input c_up,
+   output reg o
+   );
+   localparam S0=6'b000001;
+   localparam S1=6'b000010;
+   localparam S2=6'b000100;
+   localparam S3=6'b001000;
+   localparam S4=6'b010000;
+   localparam S5=6'b100000;
+   
+   reg [2:0]ct;
+   reg [5:0]st;
+   
+   always @(posedge clk or negedge rst_b) begin
+     if(rst_b==0 || clr)begin
+       st<=S0;
+       ct<=0;
+       o<=0;
+       end
+     else
+       if(c_up) begin
+       case (st)
+        S0: st<=S1; 
+        S1: st<=S2; 
+        S2: st<=S3; 
+        S3: st<=S4; 
+        S4: st<=S5; 
+        S5: st<=S0; 
+      endcase
+       end
+   end
+   
+   always@(posedge clk) begin
+     if (st==S0||st==S1||st==S2||st==S3) begin
+       ct<=ct+1;
+       if(ct<4) begin
+         o<=1;
+       end
+     else begin
+       o<=0;
+     end
+   end
+ else
+   begin
+     ct<=0;
+     o<=0;
+   end
+ end
+ endmodule
+ 
+`timescale 1ns/1ps
+
+module divby6_tb;
+    reg clk;
+    reg rst_b;
+    reg clr;
+    reg c_up;
+    wire o;
+
+divby6 uut (
+  .clk(clk),
+   .rst_b(rst_b),
+   .clr(clr),
+   .c_up(c_up),
+   .o(o)
+    );
+
+  always begin
+    #50 clk = ~clk; // Perioada de 100 ns
+  end
+
+initial begin
+    clk = 0;
+    rst_b = 0; 
+    clr = 0;
+    c_up = 0;
+
+  c_up=1;
+  #400
+  clr=1;
+  #100
+  clr=0;
+  #100
+  c_up=0;
+  #100
+  c_up=1;
+  #400
+  c_up=0;
+  #200
+  c_up=1;
+  
+  #300
+$finish;
+    end
+endmodule
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+     
+   end
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   

@@ -1,0 +1,33 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/home/eda/shared/Rezolvare-Teste-AC/Varianta8
+vswitch
+!s100 7Lm<]m`kLdj]YV0A>JnU52
+I4>IzgPFAQXi=KCC9_AhZ_1
+VOG^4TjnzlDLT7IDIbTGHz0
+Z1 w1733581614
+Z2 8switch.v
+Z3 Fswitch.v
+L0 1
+Z4 OV;L;6.5b;42
+r1
+!s85 0
+31
+!s101 -O0
+o-O0
+vswitch_tb
+!s100 GHnTgK_2e<L:KNVzU`0Z<1
+IV3P4S3lEH;^oLYN5a2J<?2
+VW0V8TP7k>KWK@AhOR]I<o2
+R1
+R2
+R3
+L0 32
+R4
+r1
+!s85 0
+31
+!s101 -O0
+o-O0

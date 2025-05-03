@@ -1,0 +1,116 @@
+module sadd (
+    input clk, 
+    input rst_b, 
+    input x, 
+    input y, 
+    output reg s, 
+    output reg carry_out
+);
+
+    localparam S0 = 1'b0;  
+    localparam S1 = 1'b1;  
+
+    reg state;                
+    reg next_state;          
+
+    always @(posedge clk or negedge rst_b) begin
+        if (!rst_b)
+            state <= S0;  
+        else
+            state <= next_state;  
+    end
+
+    always @(*) begin
+        case (state)
+            S0: begin
+                case ({x, y})
+                    2'b00: begin 
+                        s = 1'b0; 
+                        next_state = S0; 
+                        carry_out = 1'b0; 
+                    end
+                    2'b01, 2'b10: begin 
+                        s = 1'b1; 
+                        next_state = S0; 
+                        carry_out = 1'b0; 
+                    end
+                    2'b11: begin 
+                        s = 1'b0; 
+                        next_state = S1; 
+                        carry_out = 1'b1; 
+                    end
+                endcase
+            end
+            S1: begin
+                case ({x, y})
+                    2'b00: begin 
+                        s = 1'b1; 
+                        next_state = S0; 
+                        carry_out = 1'b0; 
+                    end
+                    2'b01, 2'b10: begin 
+                        s = 1'b0; 
+                        next_state = S1; 
+                        carry_out = 1'b1; 
+                    end
+                    2'b11: begin 
+                        s = 1'b1; 
+                        next_state = S1; 
+                        carry_out = 1'b1; 
+                    end
+                endcase
+            end
+        endcase
+    end
+
+endmodule
+
+module sadd_tb;
+
+    reg clk;
+    reg rst_b;
+    reg [3:0] X, Y;  
+    wire s;
+    wire carry_out;
+    reg x, y;  
+
+    integer i;
+
+    sadd uut (
+        .clk(clk), 
+        .rst_b(rst_b), 
+        .x(x), 
+        .y(y), 
+        .s(s), 
+        .carry_out(carry_out)
+    );
+
+    localparam CLK_PERIOD = 100;
+    localparam RUNNING_CYCLES = 4;
+    initial begin
+        clk = 1'd0;
+        repeat (2*RUNNING_CYCLES) #(CLK_PERIOD/2) clk = ~clk;
+    end
+    
+    localparam RST_DURATION = 25;
+    initial begin
+      rst_b = 1'd0;
+      #RST_DURATION rst_b = 1'd1;
+    end
+
+    initial begin
+        x=0;
+        #100 x=1;
+        #200 x=0;
+    end
+    
+    initial begin
+        y=1;
+        #200 y=0;
+    end
+    
+    initial begin
+        $monitor("Timp=%0t | x=%b | y=%b | sum=%b | carry_out=%b", $time, x, y, s, carry_out);
+    end
+endmodule
+

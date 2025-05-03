@@ -1,0 +1,59 @@
+module mlopadd(
+  input clk,
+  input rst_b,
+  input [15:0]x,
+  output reg [15:0]a
+  );
+
+always @(posedge clk or negedge rst_b) begin
+  if(rst_b==0) begin
+    a<=0;
+  end
+  else begin
+    a<=a+x;
+    end
+end
+endmodule
+
+`timescale 1ns/1ps
+module mlopadd_tb;
+  reg clk;
+  reg rst_b;
+  reg [15:0]x;
+  wire [15:0]a;
+  
+  integer i;
+   
+  mlopadd uut(
+   .clk(clk),
+   .rst_b(rst_b),
+   .x(x),
+   .a(a)
+  ); 
+  
+  always begin
+    #50 clk=~clk;
+  end
+  
+  initial begin
+    clk=0;
+    rst_b=0;
+    x=0;
+    
+    #25 rst_b=1;
+    for (i = 0; i < 100; i = i + 1) begin
+      #100
+      x=2*i+1;
+  end
+  
+  #500
+  $display("Suma finala este: %d", a);
+  $finish;
+  end
+endmodule 
+  
+  
+  
+  
+  
+  

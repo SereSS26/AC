@@ -1,0 +1,107 @@
+`define S0 2'b00
+`define S1 2'b01
+
+module sumator(
+  input clk,rst,
+  input [1:0]i,
+  output reg o
+  );
+  
+  reg [1:0]state_next,state_reg;
+  
+  always@(posedge clk or negedge rst) begin
+    if(rst) 
+      state_reg<=`S0;
+    else
+      state_reg<=state_next;
+    end
+    
+    always@(*) begin
+    
+      case(state_reg)
+        `S0:begin
+          case(i)
+            2'b00: begin
+              state_next=`S0;
+              o=0;
+            end
+            2'b01: begin
+              state_next=`S0;
+              o=1;
+            end
+            2'b10: begin
+              state_next=`S0;
+              o=1;
+            end
+            2'b11: begin
+              state_next=`S1;
+              o=0;
+            end
+          endcase
+        end
+        
+         `S1:begin
+          case(i)
+            2'b00: begin
+              state_next=`S0;
+              o=1;
+            end
+            2'b01: begin
+              state_next=`S1;
+              o=0;
+            end
+            2'b10: begin
+              state_next=`S1;
+              o=0;
+            end
+            2'b11: begin
+              state_next=`S1;
+              o=1;
+            end
+          endcase
+        end    
+            
+      endcase
+      
+    end
+  endmodule
+  
+  
+`timescale 1ns/1ps  
+
+module sumator_tb;
+reg clk;            
+reg rst;            
+reg [1:0] i;       
+wire o;            
+
+sumator uut(
+    .clk(clk),
+    .rst(rst),
+    .i(i),
+    .o(o)
+    );
+    
+always begin
+    #50 clk=~clk;
+  end
+  
+initial begin
+  clk=0;
+    rst = 0;
+    i=2'b00;
+    
+    #25 rst=1;
+    
+  repeat(8) begin
+  $display("Before: State: %b, i: %b, o: %b", uut.state_reg, i, o);
+  #100
+  $display("After: State: %b, i: %b, o: %b", uut.state_reg, i, o);
+  i=i+1;
+  if(i>2'b11)
+    i=2'b00;
+   end 
+   $finish;
+    end
+
+endmodule

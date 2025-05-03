@@ -1,0 +1,79 @@
+module fdivby5(
+  input clk,
+  input rst_b,
+  input clr,
+  input c_up,
+  output reg fdclk
+  );
+  
+reg q0,q1,q2;
+
+wire d0,d1,d2;
+wire clr_out;
+
+assign d0=~q0;
+assign d1=q0^q1;
+assign d2=q2^(q1&q0);
+
+assign fdclk = ~(q0|q1|q2);
+  
+assign clr_out = clr & q2;
+
+always @(posedge clk or negedge rst_b) begin
+  if (rst_b==0) begin
+      q0 <= 0;
+      q1 <= 0;
+      q2 <= 0;
+  end else if (clr_out) begin
+      q0 <= 0;
+      q1 <= 0;
+      q2 <= 0;
+    end else if (c_up) begin
+      q0 <= d0;
+      q1 <= d1;
+      q2 <= d2;
+    end
+  end
+
+endmodule
+
+`timescale 1ns/1ps
+
+module fdivby5_tb;
+  reg clk;
+  reg rst_b;
+  reg clr;
+  reg c_up;
+  wire fdclk;
+
+  fdivby5 uut (
+    .clk(clk),
+    .rst_b(rst_b),
+    .clr(clr),
+    .c_up(c_up),
+    .fdclk(fdclk)
+  );
+
+  always begin
+    #50 clk = ~clk; 
+  end
+
+  initial begin
+    clk = 0;
+    rst_b = 0; 
+    clr = 0;
+    c_up = 0;
+
+    #25 rst_b = 1;
+
+    
+    c_up = 1;
+    
+    #400;
+    clr = 1;
+    #100 clr = 0;
+
+    #300;
+    $finish;
+  end
+endmodule

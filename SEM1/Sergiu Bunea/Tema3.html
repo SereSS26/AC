@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <title>Populație Sortată după Vârstă</title>
+</head>
+<body>
+  <h2>Populația Sortată după Vârstă</h2>
+  <ul id="population-list"></ul>
+
+  <script>
+   population =[ 
+  {year: 1850, age: 0, sex: 1, people: 1483789} ,
+  {year: 1850, age: 0, sex: 2, people: 1450376} ,
+  {year: 1850, age: 5, sex: 1, people: 1411067} ,
+  {year: 1850, age: 5, sex: 2, people: 1359668} ,
+  {year: 1850, age: 10, sex: 1, people: 1260099} ,
+  {year: 1850, age: 10, sex: 2, people: 1216114} ,
+  {year: 1850, age: 15, sex: 1, people: 1077133} ,
+  {year: 1850, age: 15, sex: 2, people: 1110619} ,
+ {year: 1850, age: 20, sex: 1, people: 1017281} ,
+ {year: 1850, age: 20, sex: 2, people: 1003841} ,
+      {year: 1850, age: 25, sex: 1, people: 862547} ,
+      {year: 1850, age: 25, sex: 2, people: 799482} ,
+      {year: 1850, age: 30, sex: 1, people: 730638} ,
+      {year: 1850, age: 30, sex: 2, people: 639636} ,
+ 
+]; 
+
+
+
+    // Sortează după vârstă
+    population.sort((a, b) => a.age - b.age);
+
+    // Afișează datele sortate
+    const list = document.getElementById('population-list');
+    population.forEach(person => {
+      const listItem = document.createElement('li');
+      listItem.textContent = `Anul: ${person.year}, Vârsta: ${person.age}, Sex: ${person.sex}, Populație: ${person.people}`;
+      list.appendChild(listItem);
+    });
+  </script>
+</body>
+</html>

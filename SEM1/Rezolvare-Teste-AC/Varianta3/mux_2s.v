@@ -1,0 +1,50 @@
+module mux_2s #(
+  parameter w = 4
+)(
+  input [w-1:0] d0, d1, d2, d3,
+  input [1:0] s,
+  output reg [w-1:0] o
+);
+
+ always @(*) begin
+      o={4{1'bz}};           
+      case (s)
+        2'b00: o = d0; 
+        2'b01: o = d1; 
+        2'b10: o = d2; 
+        2'b11: o = d3;  
+      endcase
+  end
+endmodule
+
+module mux_2s_tb;
+    parameter W = 4; 
+    reg [W-1:0] d0, d1, d2, d3; 
+    reg [1:0] s;                
+    wire [W-1:0] o;        
+
+    mux_2s #(.w(W)) mux_instance (
+        .d0(d0),
+        .d1(d1),
+        .d2(d2),
+        .d3(d3),
+        .s(s),
+        .o(o)
+    );
+
+    initial begin
+        $display("Time\td0\td1\td2\td3\ts\to");
+        $monitor("%0t\t%b\t%b\t%b\t%b\t%b\t%b", $time, d0, d1, d2, d3, s, o);
+
+        d0 = 4'b0001; 
+        d1 = 4'b0010; 
+        d2 = 4'b0100; 
+        d3 = 4'b1000;
+        
+        s = 2'b00; #10; 
+        s = 2'b01; #10; 
+        s = 2'b10; #10; 
+        s = 2'b11; #10; 
+        
+    end
+endmodule

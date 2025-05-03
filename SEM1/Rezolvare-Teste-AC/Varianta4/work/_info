@@ -1,0 +1,47 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/home/eda/shared/Rezolvare-Teste-AC/Varianta4
+vcomp_3b
+!s100 _oSF]b:a4iQPBOoP1;DAk3
+IH2@X7gfJ7eIQT97Q@?O500
+VB[gG1Sac4f<0]@HbL5FG00
+Z1 w1733560807
+Z2 8comp_3b.v
+Z3 Fcomp_3b.v
+L0 12
+Z4 OV;L;6.5b;42
+r1
+!s85 0
+31
+!s101 -O0
+o-O0
+vcomp_3b_tb
+!s100 gb6@6SKVHM^Hh@c_?NIR?1
+II]8]EC6JnV<KeRa02=Fi]0
+VV`7VZlaEdN0HSn1ZaE_1O2
+R1
+R2
+R3
+L0 53
+R4
+r1
+!s85 0
+31
+!s101 -O0
+o-O0
+vrel
+!s100 T9ZG?JDGl`2QO7Z99TTK`3
+IE:0CEEOc75GOZ4nLDCAER2
+V;A_n>1k_Aj`0Wm4Uo^5ZZ0
+R1
+R2
+R3
+L0 1
+R4
+r1
+!s85 0
+31
+!s101 -O0
+o-O0

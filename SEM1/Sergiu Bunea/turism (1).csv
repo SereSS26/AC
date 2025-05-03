@@ -1,0 +1,484 @@
+﻿indicator,an,valoare
+Număr de unități de cazare,2005-01-01T00:00:00,56
+Număr de unități de cazare,2006-01-01T00:00:00,65
+Număr de unități de cazare,2007-01-01T00:00:00,64
+Număr de unități de cazare,2008-01-01T00:00:00,64
+Număr de unități de cazare,2009-01-01T00:00:00,70
+Număr de unități de cazare,2010-01-01T00:00:00,79
+Număr de unități de cazare,2011-01-01T00:00:00,85
+Număr de unități de cazare,2012-01-01T00:00:00,102
+Număr de unități de cazare,2013-01-01T00:00:00,107
+Număr de unități de cazare,2014-01-01T00:00:00,100
+Număr de unități de cazare,2015-01-01T00:00:00,95
+Număr de unități de cazare,2016-01-01T00:00:00,95
+Număr de unități de cazare,2017-01-01T00:00:00,95
+Număr de unități de cazare,2018-01-01T00:00:00,101
+Număr de unități de cazare,2019-01-01T00:00:00,93
+Număr de unități de cazare Hotel,1990-01-01T00:00:00,7
+Număr de unități de cazare Hotel,1991-01-01T00:00:00,4
+Număr de unități de cazare Hotel,1992-01-01T00:00:00,8
+Număr de unități de cazare Hotel,1993-01-01T00:00:00,8
+Număr de unități de cazare Hotel,1994-01-01T00:00:00,10
+Număr de unități de cazare Hotel,1995-01-01T00:00:00,10
+Număr de unități de cazare Hotel,1996-01-01T00:00:00,8
+Număr de unități de cazare Hotel,1997-01-01T00:00:00,11
+Număr de unități de cazare Hotel,1998-01-01T00:00:00,12
+Număr de unități de cazare Hotel,1999-01-01T00:00:00,13
+Număr de unități de cazare Hotel,2000-01-01T00:00:00,14
+Număr de unități de cazare Hotel,2001-01-01T00:00:00,16
+Număr de unități de cazare Hotel,2002-01-01T00:00:00,17
+Număr de unități de cazare Hotel,2003-01-01T00:00:00,19
+Număr de unități de cazare Hotel,2004-01-01T00:00:00,20
+Număr de unități de cazare Hotel,2005-01-01T00:00:00,26
+Număr de unități de cazare Hotel,2006-01-01T00:00:00,31
+Număr de unități de cazare Hotel,2007-01-01T00:00:00,32
+Număr de unități de cazare Hotel,2008-01-01T00:00:00,32
+Număr de unități de cazare Hotel,2009-01-01T00:00:00,34
+Număr de unități de cazare Hotel,2010-01-01T00:00:00,38
+Număr de unități de cazare Hotel,2011-01-01T00:00:00,44
+Număr de unități de cazare Hotel,2012-01-01T00:00:00,49
+Număr de unități de cazare Hotel,2013-01-01T00:00:00,49
+Număr de unități de cazare Hotel,2014-01-01T00:00:00,51
+Număr de unități de cazare Hotel,2015-01-01T00:00:00,44
+Număr de unități de cazare Hotel,2016-01-01T00:00:00,44
+Număr de unități de cazare Hotel,2017-01-01T00:00:00,42
+Număr de unități de cazare Hotel,2018-01-01T00:00:00,44
+Număr de unități de cazare Hotel,2019-01-01T00:00:00,39
+Număr de unități de cazare Vilă turistică,2005-01-01T00:00:00,2
+Număr de unități de cazare Vilă turistică,2006-01-01T00:00:00,2
+Număr de unități de cazare Vilă turistică,2007-01-01T00:00:00,1
+Număr de unități de cazare Vilă turistică,2008-01-01T00:00:00,1
+Număr de unități de cazare Vilă turistică,2009-01-01T00:00:00,1
+Număr de unități de cazare Vilă turistică,2010-01-01T00:00:00,1
+Număr de unități de cazare Vilă turistică,2011-01-01T00:00:00,1
+Număr de unități de cazare Vilă turistică,2012-01-01T00:00:00,2
+Număr de unități de cazare Vilă turistică,2013-01-01T00:00:00,2
+Număr de unități de cazare Vilă turistică,2014-01-01T00:00:00,2
+Număr de unități de cazare Vilă turistică,2015-01-01T00:00:00,3
+Număr de unități de cazare Vilă turistică,2016-01-01T00:00:00,3
+Număr de unități de cazare Hostel,2009-01-01T00:00:00,3
+Număr de unități de cazare Hostel,2010-01-01T00:00:00,2
+Număr de unități de cazare Hostel,2011-01-01T00:00:00,2
+Număr de unități de cazare Hostel,2012-01-01T00:00:00,5
+Număr de unități de cazare Hostel,2013-01-01T00:00:00,7
+Număr de unități de cazare Hostel,2014-01-01T00:00:00,7
+Număr de unități de cazare Hostel,2015-01-01T00:00:00,9
+Număr de unități de cazare Hostel,2016-01-01T00:00:00,9
+Număr de unități de cazare Hostel,2017-01-01T00:00:00,10
+Număr de unități de cazare Hostel,2018-01-01T00:00:00,12
+Număr de unități de cazare Hostel,2019-01-01T00:00:00,11
+Număr de unități de cazare Camping,1990-01-01T00:00:00,1
+Număr de unități de cazare Camping,1992-01-01T00:00:00,1
+Număr de unități de cazare Camping,1993-01-01T00:00:00,1
+Număr de unități de cazare Camping,1994-01-01T00:00:00,1
+Număr de unități de cazare Camping,1995-01-01T00:00:00,1
+Număr de unități de cazare Camping,1996-01-01T00:00:00,1
+Număr de unități de cazare Camping,1997-01-01T00:00:00,1
+Număr de unități de cazare Camping,1998-01-01T00:00:00,1
+Număr de unități de cazare Camping,1999-01-01T00:00:00,1
+Număr de unități de cazare Camping,2000-01-01T00:00:00,1
+Număr de unități de cazare Camping,2001-01-01T00:00:00,1
+Număr de unități de cazare Camping,2002-01-01T00:00:00,1
+Număr de unități de cazare Camping,2003-01-01T00:00:00,1
+Număr de unități de cazare Camping,2004-01-01T00:00:00,1
+Număr de unități de cazare Camping,2005-01-01T00:00:00,1
+Număr de unități de cazare Camping,2006-01-01T00:00:00,1
+Număr de unități de cazare Camping,2007-01-01T00:00:00,1
+Număr de unități de cazare Camping,2008-01-01T00:00:00,1
+Număr de unități de cazare Camping,2009-01-01T00:00:00,1
+Număr de unități de cazare Camping,2010-01-01T00:00:00,1
+Număr de unități de cazare Camping,2011-01-01T00:00:00,1
+Număr de unități de cazare Camping,2012-01-01T00:00:00,1
+Număr de unități de cazare Camping,2013-01-01T00:00:00,1
+Număr de unități de cazare Camping,2014-01-01T00:00:00,1
+Număr de unități de cazare Camping,2015-01-01T00:00:00,1
+Număr de unități de cazare Camping,2016-01-01T00:00:00,1
+Număr de unități de cazare Camping,2017-01-01T00:00:00,1
+Număr de unități de cazare Camping,2018-01-01T00:00:00,1
+Număr de unități de cazare Camping,2019-01-01T00:00:00,1
+Număr de unități de cazare Pensiuni turistice,2001-01-01T00:00:00,6
+Număr de unități de cazare Pensiuni turistice,2002-01-01T00:00:00,11
+Număr de unități de cazare Pensiuni turistice,2003-01-01T00:00:00,11
+Număr de unități de cazare Pensiuni turistice,2004-01-01T00:00:00,20
+Număr de unități de cazare Pensiuni turistice,2005-01-01T00:00:00,24
+Număr de unități de cazare Pensiuni turistice,2006-01-01T00:00:00,28
+Număr de unități de cazare Pensiuni turistice,2007-01-01T00:00:00,27
+Număr de unități de cazare Pensiuni turistice,2008-01-01T00:00:00,27
+Număr de unități de cazare Pensiuni turistice,2009-01-01T00:00:00,31
+Număr de unități de cazare Pensiuni turistice,2010-01-01T00:00:00,37
+Număr de unități de cazare Pensiuni turistice,2011-01-01T00:00:00,38
+Număr de unități de cazare Pensiuni turistice,2012-01-01T00:00:00,47
+Număr de unități de cazare Pensiuni turistice,2013-01-01T00:00:00,50
+Număr de unități de cazare Pensiuni turistice,2014-01-01T00:00:00,39
+Număr de unități de cazare Pensiuni turistice,2015-01-01T00:00:00,37
+Număr de unități de cazare Pensiuni turistice,2016-01-01T00:00:00,37
+Număr de unități de cazare Pensiuni turistice,2017-01-01T00:00:00,38
+Număr de unități de cazare Pensiuni turistice,2018-01-01T00:00:00,38
+Număr de unități de cazare Pensiuni turistice,2019-01-01T00:00:00,37
+Număr de unități de cazare Motel,1990-01-01T00:00:00,1
+Număr de unități de cazare Motel,1991-01-01T00:00:00,3
+Număr de unități de cazare Motel,1992-01-01T00:00:00,1
+Număr de unități de cazare Motel,1993-01-01T00:00:00,1
+Număr de unități de cazare Motel,1994-01-01T00:00:00,1
+Număr de unități de cazare Motel,1995-01-01T00:00:00,1
+Număr de unități de cazare Motel,1996-01-01T00:00:00,1
+Număr de unități de cazare Hotel pentru tineret,2001-01-01T00:00:00,2
+Număr de unități de cazare Hotel pentru tineret,2002-01-01T00:00:00,1
+Număr de unități de cazare Hotel pentru tineret,2003-01-01T00:00:00,1
+Număr de unități de cazare Hotel pentru tineret,2004-01-01T00:00:00,1
+Număr de unități de cazare Hotel pentru tineret,2005-01-01T00:00:00,3
+Număr de unități de cazare Hotel pentru tineret,2006-01-01T00:00:00,3
+Număr de unități de cazare Hotel pentru tineret,2007-01-01T00:00:00,3
+Număr de unități de cazare Hotel pentru tineret,2008-01-01T00:00:00,3
+Număr de unități de cazare Pensiuni agroturistice,2014-01-01T00:00:00,1
+Număr de unități de cazare Pensiuni agroturistice,2018-01-01T00:00:00,1
+Număr de unități de cazare Pensiuni agroturistice,2019-01-01T00:00:00,1
+Număr de unități de cazare Tabere de elevi și preșcolari,2015-01-01T00:00:00,1
+Număr de unități de cazare Tabere de elevi și preșcolari,2016-01-01T00:00:00,1
+Număr de unități de cazare Tabere de elevi și preșcolari,2017-01-01T00:00:00,1
+Număr de unități de cazare Tabere de elevi și preșcolari,2018-01-01T00:00:00,1
+Capacitate de cazare (cazări pe an per tip de unitate),2001-01-01T00:00:00,717455
+Capacitate de cazare (cazări pe an per tip de unitate),2002-01-01T00:00:00,748280
+Capacitate de cazare (cazări pe an per tip de unitate),2003-01-01T00:00:00,821848
+Capacitate de cazare (cazări pe an per tip de unitate),2004-01-01T00:00:00,918458
+Capacitate de cazare (cazări pe an per tip de unitate),2005-01-01T00:00:00,1056859
+Capacitate de cazare (cazări pe an per tip de unitate),2006-01-01T00:00:00,1192351
+Capacitate de cazare (cazări pe an per tip de unitate),2007-01-01T00:00:00,1264266
+Capacitate de cazare (cazări pe an per tip de unitate),2008-01-01T00:00:00,1313955
+Capacitate de cazare (cazări pe an per tip de unitate),2009-01-01T00:00:00,1306825
+Capacitate de cazare (cazări pe an per tip de unitate),2010-01-01T00:00:00,1400855
+Capacitate de cazare (cazări pe an per tip de unitate),2011-01-01T00:00:00,1562912
+Capacitate de cazare (cazări pe an per tip de unitate),2012-01-01T00:00:00,1745628
+Capacitate de cazare (cazări pe an per tip de unitate),2013-01-01T00:00:00,1802919
+Capacitate de cazare (cazări pe an per tip de unitate),2014-01-01T00:00:00,1809947
+Capacitate de cazare (cazări pe an per tip de unitate),2015-01-01T00:00:00,1829564
+Capacitate de cazare (cazări pe an per tip de unitate),2016-01-01T00:00:00,1861569
+Capacitate de cazare (cazări pe an per tip de unitate),2017-01-01T00:00:00,1887158
+Capacitate de cazare (cazări pe an per tip de unitate),2018-01-01T00:00:00,1829678
+Capacitate de cazare (cazări pe an per tip de unitate),2019-01-01T00:00:00,1699772
+Capacitate de cazare Hotel,2001-01-01T00:00:00,531781
+Capacitate de cazare Hotel,2002-01-01T00:00:00,484820
+Capacitate de cazare Hotel,2003-01-01T00:00:00,587577
+Capacitate de cazare Hotel,2004-01-01T00:00:00,649033
+Capacitate de cazare Hotel,2005-01-01T00:00:00,764517
+Capacitate de cazare Hotel,2006-01-01T00:00:00,878046
+Capacitate de cazare Hotel,2007-01-01T00:00:00,937672
+Capacitate de cazare Hotel,2008-01-01T00:00:00,971308
+Capacitate de cazare Hotel,2009-01-01T00:00:00,978067
+Capacitate de cazare Hotel,2010-01-01T00:00:00,1058689
+Capacitate de cazare Hotel,2011-01-01T00:00:00,1164869
+Capacitate de cazare Hotel,2012-01-01T00:00:00,1269959
+Capacitate de cazare Hotel,2013-01-01T00:00:00,1265685
+Capacitate de cazare Hotel,2014-01-01T00:00:00,1325877
+Capacitate de cazare Hotel,2015-01-01T00:00:00,1316203
+Capacitate de cazare Hotel,2016-01-01T00:00:00,1334207
+Capacitate de cazare Hotel,2017-01-01T00:00:00,1313281
+Capacitate de cazare Hotel,2018-01-01T00:00:00,1238996
+Capacitate de cazare Hotel,2019-01-01T00:00:00,1166167
+Capacitate de cazare Vilă turistică,2001-01-01T00:00:00,18980
+Capacitate de cazare Vilă turistică,2002-01-01T00:00:00,17520
+Capacitate de cazare Vilă turistică,2003-01-01T00:00:00,15492
+Capacitate de cazare Vilă turistică,2004-01-01T00:00:00,14812
+Capacitate de cazare Vilă turistică,2005-01-01T00:00:00,8836
+Capacitate de cazare Vilă turistică,2006-01-01T00:00:00,8712
+Capacitate de cazare Vilă turistică,2007-01-01T00:00:00,504
+Capacitate de cazare Vilă turistică,2008-01-01T00:00:00,4742
+Capacitate de cazare Vilă turistică,2009-01-01T00:00:00,22452
+Capacitate de cazare Vilă turistică,2010-01-01T00:00:00,22866
+Capacitate de cazare Vilă turistică,2011-01-01T00:00:00,22586
+Capacitate de cazare Vilă turistică,2012-01-01T00:00:00,22180
+Capacitate de cazare Vilă turistică,2013-01-01T00:00:00,22180
+Capacitate de cazare Hostel,2009-01-01T00:00:00,27726
+Capacitate de cazare Hostel,2010-01-01T00:00:00,19166
+Capacitate de cazare Hostel,2011-01-01T00:00:00,22936
+Capacitate de cazare Hostel,2012-01-01T00:00:00,78133
+Capacitate de cazare Hostel,2013-01-01T00:00:00,125019
+Capacitate de cazare Hostel,2014-01-01T00:00:00,124198
+Capacitate de cazare Hostel,2015-01-01T00:00:00,147478
+Capacitate de cazare Hostel,2016-01-01T00:00:00,177937
+Capacitate de cazare Hostel,2017-01-01T00:00:00,177315
+Capacitate de cazare Hostel,2018-01-01T00:00:00,171940
+Capacitate de cazare Hostel,2019-01-01T00:00:00,160443
+Capacitate de cazare Camping,2001-01-01T00:00:00,89570
+Capacitate de cazare Camping,2002-01-01T00:00:00,145558
+Capacitate de cazare Camping,2003-01-01T00:00:00,114388
+Capacitate de cazare Camping,2004-01-01T00:00:00,89918
+Capacitate de cazare Camping,2005-01-01T00:00:00,91980
+Capacitate de cazare Camping,2006-01-01T00:00:00,93452
+Capacitate de cazare Camping,2007-01-01T00:00:00,94900
+Capacitate de cazare Camping,2008-01-01T00:00:00,95160
+Capacitate de cazare Camping,2009-01-01T00:00:00,94900
+Capacitate de cazare Camping,2010-01-01T00:00:00,94900
+Capacitate de cazare Camping,2011-01-01T00:00:00,94900
+Capacitate de cazare Camping,2012-01-01T00:00:00,89760
+Capacitate de cazare Camping,2013-01-01T00:00:00,89860
+Capacitate de cazare Camping,2014-01-01T00:00:00,79040
+Capacitate de cazare Camping,2015-01-01T00:00:00,31720
+Capacitate de cazare Camping,2017-01-01T00:00:00,55640
+Capacitate de cazare Camping,2018-01-01T00:00:00,47840
+Capacitate de cazare Camping,2019-01-01T00:00:00,31720
+Capazitate de cazare Pensiuni turistice,2001-01-01T00:00:00,64168
+Capazitate de cazare Pensiuni turistice,2002-01-01T00:00:00,91822
+Capazitate de cazare Pensiuni turistice,2003-01-01T00:00:00,97091
+Capazitate de cazare Pensiuni turistice,2004-01-01T00:00:00,157375
+Capazitate de cazare Pensiuni turistice,2005-01-01T00:00:00,170888
+Capazitate de cazare Pensiuni turistice,2006-01-01T00:00:00,186591
+Capazitate de cazare Pensiuni turistice,2007-01-01T00:00:00,204428
+Capazitate de cazare Pensiuni turistice,2008-01-01T00:00:00,220295
+Capazitate de cazare Pensiuni turistice,2009-01-01T00:00:00,206132
+Capazitate de cazare Pensiuni turistice,2010-01-01T00:00:00,227480
+Capazitate de cazare Pensiuni turistice,2011-01-01T00:00:00,280207
+Capazitate de cazare Pensiuni turistice,2012-01-01T00:00:00,307776
+Capazitate de cazare Pensiuni turistice,2013-01-01T00:00:00,321851
+Capazitate de cazare Pensiuni turistice,2014-01-01T00:00:00,271020
+Capazitate de cazare Pensiuni turistice,2015-01-01T00:00:00,268507
+Capazitate de cazare Pensiuni turistice,2016-01-01T00:00:00,287597
+Capazitate de cazare Pensiuni turistice,2017-01-01T00:00:00,281572
+Capazitate de cazare Pensiuni turistice,2018-01-01T00:00:00,311897
+Capazitate de cazare Pensiuni turistice,2019-01-01T00:00:00,291412
+Capacitate de cazare Pensiuni agroturistice,2014-01-01T00:00:00,2996
+Capacitate de cazare Pensiuni agroturistice,2015-01-01T00:00:00,12594
+Capacitate de cazare Pensiuni agroturistice,2016-01-01T00:00:00,10100
+Capacitate de cazare Pensiuni agroturistice,2017-01-01T00:00:00,7280
+Capacitate de cazare Pensiuni agroturistice,2018-01-01T00:00:00,7260
+Capacitate de cazare Pensiuni agroturistice,2019-01-01T00:00:00,7060
+Capacitate de cazare Hotel pentru tineret,2001-01-01T00:00:00,12956
+Capacitate de cazare Hotel pentru tineret,2002-01-01T00:00:00,8560
+Capacitate de cazare Hotel pentru tineret,2003-01-01T00:00:00,7300
+Capacitate de cazare Hotel pentru tineret,2004-01-01T00:00:00,7320
+Capacitate de cazare Hotel pentru tineret,2005-01-01T00:00:00,19708
+Capacitate de cazare Hotel pentru tineret,2006-01-01T00:00:00,25550
+Capacitate de cazare Hotel pentru tineret,2007-01-01T00:00:00,27266
+Capacitate de cazare Hotel pentru tineret,2008-01-01T00:00:00,27192
+Capacitate de cazare Tabere de elevi si preșcolari,2014-01-01T00:00:00,2074
+Capacitate de cazare Tabere de elevi si preșcolari,2015-01-01T00:00:00,12410
+Capacitate de cazare Tabere de elevi si preșcolari,2016-01-01T00:00:00,10562
+Capacitate de cazare Tabere de elevi si preșcolari,2017-01-01T00:00:00,11284
+Capacitate de cazare Tabere de elevi si preșcolari,2018-01-01T00:00:00,11315
+Capacitate de cazare Hoteluri apartament,2015-01-01T00:00:00,18200
+Capacitate de cazare Hoteluri apartament,2016-01-01T00:00:00,18300
+Capacitate de cazare Hoteluri apartament,2017-01-01T00:00:00,18200
+Capacitate de cazare Hoteluri apartament,2018-01-01T00:00:00,18250
+Capacitate de cazare Hoteluri apartament,2019-01-01T00:00:00,20790
+Numărul sosirilor anuale ale turiștilor Hotel,2001-01-01T00:00:00,127462
+Numărul sosirilor anuale ale turiștilor Hotel,2002-01-01T00:00:00,109792
+Numărul sosirilor anuale ale turiștilor Hotel,2003-01-01T00:00:00,118359
+Numărul sosirilor anuale ale turiștilor Hotel,2004-01-01T00:00:00,125663
+Numărul sosirilor anuale ale turiștilor Hotel,2005-01-01T00:00:00,138544
+Numărul sosirilor anuale ale turiștilor Hotel,2006-01-01T00:00:00,167975
+Numărul sosirilor anuale ale turiștilor Hotel,2007-01-01T00:00:00,195426
+Numărul sosirilor anuale ale turiștilor Hotel,2008-01-01T00:00:00,187983
+Numărul sosirilor anuale ale turiștilor Hotel,2009-01-01T00:00:00,145303
+Numărul sosirilor anuale ale turiștilor Hotel,2010-01-01T00:00:00,146389
+Numărul sosirilor anuale ale turiștilor Hotel,2011-01-01T00:00:00,177489
+Numărul sosirilor anuale ale turiștilor Hotel,2012-01-01T00:00:00,186215
+Numărul sosirilor anuale ale turiștilor Hotel,2013-01-01T00:00:00,177865
+Numărul sosirilor anuale ale turiștilor Hotel,2014-01-01T00:00:00,194146
+Numărul sosirilor anuale ale turiștilor Hotel,2015-01-01T00:00:00,221164
+Numărul sosirilor anuale ale turiștilor Hotel,2016-01-01T00:00:00,241075
+Numărul sosirilor anuale ale turiștilor Hotel,2017-01-01T00:00:00,256402
+Numărul sosirilor anuale ale turiștilor Hotel,2018-01-01T00:00:00,238738
+Numărul sosirilor anuale ale turiștilor Hotel,2019-01-01T00:00:00,246478
+Numărul sosirilor anuale ale turiștilor Vilă turistică,2001-01-01T00:00:00,1386
+Numărul sosirilor anuale ale turiștilor Vilă turistică,2002-01-01T00:00:00,1029
+Numărul sosirilor anuale ale turiștilor Vilă turistică,2003-01-01T00:00:00,432
+Numărul sosirilor anuale ale turiștilor Vilă turistică,2004-01-01T00:00:00,713
+Numărul sosirilor anuale ale turiștilor Vilă turistică,2005-01-01T00:00:00,710
+Numărul sosirilor anuale ale turiștilor Vilă turistică,2006-01-01T00:00:00,795
+Numărul sosirilor anuale ale turiștilor Vilă turistică,2013-01-01T00:00:00,26
+Numărul sosirilor anuale ale turiștilor Vilă turistică,2014-01-01T00:00:00,279
+Numărul sosirilor anuale ale turiștilor Vilă turistică,2015-01-01T00:00:00,2211
+Numărul sosirilor anuale ale turiștilor Vilă turistică,2016-01-01T00:00:00,2209
+Numărul sosirilor anuale ale turiștilor Vilă turistică,2017-01-01T00:00:00,2420
+Numărul sosirilor anuale ale turiștilor Vilă turistică,2018-01-01T00:00:00,1912
+Numărul sosirilor anuale ale turiștilor Vilă turistică,2019-01-01T00:00:00,3004
+Numărul sosirilor anuale ale turiștilor Camping,2001-01-01T00:00:00,6877
+Numărul sosirilor anuale ale turiștilor Camping,2002-01-01T00:00:00,5276
+Numărul sosirilor anuale ale turiștilor Camping,2003-01-01T00:00:00,5092
+Numărul sosirilor anuale ale turiștilor Camping,2004-01-01T00:00:00,6391
+Numărul sosirilor anuale ale turiștilor Camping,2005-01-01T00:00:00,5618
+Numărul sosirilor anuale ale turiștilor Camping,2006-01-01T00:00:00,6932
+Numărul sosirilor anuale ale turiștilor Camping,2007-01-01T00:00:00,7769
+Numărul sosirilor anuale ale turiștilor Camping,2008-01-01T00:00:00,6910
+Numărul sosirilor anuale ale turiștilor Camping,2009-01-01T00:00:00,5374
+Numărul sosirilor anuale ale turiștilor Camping,2010-01-01T00:00:00,3616
+Numărul sosirilor anuale ale turiștilor Camping,2011-01-01T00:00:00,3772
+Numărul sosirilor anuale ale turiștilor Camping,2012-01-01T00:00:00,3732
+Numărul sosirilor anuale ale turiștilor Camping,2013-01-01T00:00:00,3173
+Numărul sosirilor anuale ale turiștilor Camping,2014-01-01T00:00:00,72
+Numărul sosirilor anuale ale turiștilor Camping,2015-01-01T00:00:00,113
+Numărul sosirilor anuale ale turiștilor Camping,2017-01-01T00:00:00,372
+Numărul sosirilor anuale ale turiștilor Camping,2018-01-01T00:00:00,378
+Numărul sosirilor anuale ale turiștilor Camping,2019-01-01T00:00:00,309
+Numărul sosirilor anuale ale turiștilor Pensiuni turistice,2001-01-01T00:00:00,4906
+Numărul sosirilor anuale ale turiștilor Pensiuni turistice,2002-01-01T00:00:00,6590
+Numărul sosirilor anuale ale turiștilor Pensiuni turistice,2003-01-01T00:00:00,7375
+Numărul sosirilor anuale ale turiștilor Pensiuni turistice,2004-01-01T00:00:00,13053
+Numărul sosirilor anuale ale turiștilor Pensiuni turistice,2005-01-01T00:00:00,14761
+Numărul sosirilor anuale ale turiștilor Pensiuni turistice,2006-01-01T00:00:00,19083
+Numărul sosirilor anuale ale turiștilor Pensiuni turistice,2007-01-01T00:00:00,25172
+Numărul sosirilor anuale ale turiștilor Pensiuni turistice,2008-01-01T00:00:00,27718
+Numărul sosirilor anuale ale turiștilor Pensiuni turistice,2009-01-01T00:00:00,23693
+Numărul sosirilor anuale ale turiștilor Pensiuni turistice,2010-01-01T00:00:00,25889
+Numărul sosirilor anuale ale turiștilor Pensiuni turistice,2011-01-01T00:00:00,28573
+Numărul sosirilor anuale ale turiștilor Pensiuni turistice,2012-01-01T00:00:00,32050
+Numărul sosirilor anuale ale turiștilor Pensiuni turistice,2013-01-01T00:00:00,32416
+Numărul sosirilor anuale ale turiștilor Pensiuni turistice,2014-01-01T00:00:00,31451
+Numărul sosirilor anuale ale turiștilor Pensiuni turistice,2015-01-01T00:00:00,36359
+Numărul sosirilor anuale ale turiștilor Pensiuni turistice,2016-01-01T00:00:00,39684
+Numărul sosirilor anuale ale turiștilor Pensiuni turistice,2017-01-01T00:00:00,43721
+Numărul sosirilor anuale ale turiștilor Pensiuni turistice,2018-01-01T00:00:00,45927
+Numărul sosirilor anuale ale turiștilor Pensiuni turistice,2019-01-01T00:00:00,46754
+Numărul sosirilor anuale ale turiștilor Pensiuni agro turistice,2014-01-01T00:00:00,130
+Numărul sosirilor anuale ale turiștilor Pensiuni agro turistice,2015-01-01T00:00:00,1715
+Numărul sosirilor anuale ale turiștilor Pensiuni agro turistice,2016-01-01T00:00:00,748
+Numărul sosirilor anuale ale turiștilor Pensiuni agro turistice,2017-01-01T00:00:00,467
+Numărul sosirilor anuale ale turiștilor Pensiuni agro turistice,2018-01-01T00:00:00,587
+Numărul sosirilor anuale ale turiștilor Pensiuni agro turistice,2019-01-01T00:00:00,429
+Numărul sosirilor anuale ale turiștilor Hosteluri,2009-01-01T00:00:00,1157
+Numărul sosirilor anuale ale turiștilor Hosteluri,2010-01-01T00:00:00,1018
+Numărul sosirilor anuale ale turiștilor Hosteluri,2011-01-01T00:00:00,1045
+Numărul sosirilor anuale ale turiștilor Hosteluri,2012-01-01T00:00:00,5549
+Numărul sosirilor anuale ale turiștilor Hosteluri,2013-01-01T00:00:00,10991
+Numărul sosirilor anuale ale turiștilor Hosteluri,2014-01-01T00:00:00,9482
+Numărul sosirilor anuale ale turiștilor Hosteluri,2015-01-01T00:00:00,14860
+Numărul sosirilor anuale ale turiștilor Hosteluri,2016-01-01T00:00:00,25086
+Numărul sosirilor anuale ale turiștilor Hosteluri,2017-01-01T00:00:00,26366
+Numărul sosirilor anuale ale turiștilor Hosteluri,2018-01-01T00:00:00,24195
+Numărul sosirilor anuale ale turiștilor Hosteluri,2019-01-01T00:00:00,24643
+Numărul sosirilor anuale ale turiștilor Hoteluri apartament,2015-01-01T00:00:00,2246
+Numărul sosirilor anuale ale turiștilor Hoteluri apartament,2016-01-01T00:00:00,2354
+Numărul sosirilor anuale ale turiștilor Hoteluri apartament,2017-01-01T00:00:00,2490
+Numărul sosirilor anuale ale turiștilor Hoteluri apartament,2018-01-01T00:00:00,2823
+Numărul sosirilor anuale ale turiștilor Hoteluri apartament,2019-01-01T00:00:00,3576
+Numărul sosirilor anuale ale turiștilor Tabere de elevi si prescolari,2014-01-01T00:00:00,132
+Numărul sosirilor anuale ale turiștilor Tabere de elevi si prescolari,2015-01-01T00:00:00,681
+Numărul sosirilor anuale ale turiștilor Tabere de elevi si prescolari,2016-01-01T00:00:00,994
+Numărul sosirilor anuale ale turiștilor Tabere de elevi si prescolari,2017-01-01T00:00:00,1220
+Numărul sosirilor anuale ale turiștilor Tabere de elevi si prescolari,2018-01-01T00:00:00,839
+Numărul de înnoptări anuale ale turiștilor,2001-01-01T00:00:00,269070
+Numărul de înnoptări anuale ale turiștilor,2002-01-01T00:00:00,221453
+Numărul de înnoptări anuale ale turiștilor,2003-01-01T00:00:00,241987
+Numărul de înnoptări anuale ale turiștilor,2004-01-01T00:00:00,283008
+Numărul de înnoptări anuale ale turiștilor,2005-01-01T00:00:00,307697
+Numărul de înnoptări anuale ale turiștilor,2006-01-01T00:00:00,379536
+Numărul de înnoptări anuale ale turiștilor,2007-01-01T00:00:00,396595
+Numărul de înnoptări anuale ale turiștilor,2008-01-01T00:00:00,405162
+Numărul de înnoptări anuale ale turiștilor,2009-01-01T00:00:00,311718
+Numărul de înnoptări anuale ale turiștilor,2010-01-01T00:00:00,331997
+Numărul de înnoptări anuale ale turiștilor,2011-01-01T00:00:00,388104
+Numărul de înnoptări anuale ale turiștilor,2012-01-01T00:00:00,434044
+Numărul de înnoptări anuale ale turiștilor,2013-01-01T00:00:00,456000
+Numărul de înnoptări anuale ale turiștilor,2014-01-01T00:00:00,482074
+Numărul de înnoptări anuale ale turiștilor,2015-01-01T00:00:00,577717
+Numărul de înnoptări anuale ale turiștilor,2016-01-01T00:00:00,665285
+Numărul de înnoptări anuale ale turiștilor,2017-01-01T00:00:00,682063
+Numărul de înnoptări anuale ale turiștilor,2018-01-01T00:00:00,702422
+Numărul de înnoptări anuale ale turiștilor,2019-01-01T00:00:00,709626
+Numărul de înnoptări anuale ale turiștilor Hotel,2001-01-01T00:00:00,241253
+Numărul de înnoptări anuale ale turiștilor Hotel,2002-01-01T00:00:00,193834
+Numărul de înnoptări anuale ale turiștilor Hotel,2003-01-01T00:00:00,216848
+Numărul de înnoptări anuale ale turiștilor Hotel,2004-01-01T00:00:00,243142
+Numărul de înnoptări anuale ale turiștilor Hotel,2005-01-01T00:00:00,262183
+Numărul de înnoptări anuale ale turiștilor Hotel,2006-01-01T00:00:00,321384
+Numărul de înnoptări anuale ale turiștilor Hotel,2007-01-01T00:00:00,330754
+Numărul de înnoptări anuale ale turiștilor Hotel,2008-01-01T00:00:00,330215
+Numărul de înnoptări anuale ale turiștilor Hotel,2009-01-01T00:00:00,256320
+Numărul de înnoptări anuale ale turiștilor Hotel,2010-01-01T00:00:00,275811
+Numărul de înnoptări anuale ale turiștilor Hotel,2011-01-01T00:00:00,327585
+Numărul de înnoptări anuale ale turiștilor Hotel,2012-01-01T00:00:00,353078
+Numărul de înnoptări anuale ale turiștilor Hotel,2013-01-01T00:00:00,347471
+Numărul de înnoptări anuale ale turiștilor Hotel,2014-01-01T00:00:00,382187
+Numărul de înnoptări anuale ale turiștilor Hotel,2015-01-01T00:00:00,436615
+Numărul de înnoptări anuale ale turiștilor Hotel,2016-01-01T00:00:00,491310
+Numărul de înnoptări anuale ale turiștilor Hotel,2017-01-01T00:00:00,516394
+Numărul de înnoptări anuale ale turiștilor Hotel,2018-01-01T00:00:00,515446
+Numărul de înnoptări anuale ale turiștilor Hotel,2019-01-01T00:00:00,523898
+Numărul de înnoptări anuale ale turiștilor Vilă turistică,2001-01-01T00:00:00,2724
+Numărul de înnoptări anuale ale turiștilor Vilă turistică,2002-01-01T00:00:00,1775
+Numărul de înnoptări anuale ale turiștilor Vilă turistică,2003-01-01T00:00:00,860
+Numărul de înnoptări anuale ale turiștilor Vilă turistică,2004-01-01T00:00:00,1399
+Numărul de înnoptări anuale ale turiștilor Vilă turistică,2005-01-01T00:00:00,1552
+Numărul de înnoptări anuale ale turiștilor Vilă turistică,2006-01-01T00:00:00,1656
+Numărul de înnoptări anuale ale turiștilor Vilă turistică,2013-01-01T00:00:00,56
+Numărul de înnoptări anuale ale turiștilor Vilă turistică,2014-01-01T00:00:00,569
+Numărul de înnoptări anuale ale turiștilor Vilă turistică,2015-01-01T00:00:00,4061
+Numărul de înnoptări anuale ale turiștilor Vilă turistică,2016-01-01T00:00:00,4357
+Numărul de înnoptări anuale ale turiștilor Vilă turistică,2017-01-01T00:00:00,4591
+Numărul de înnoptări anuale ale turiștilor Vilă turistică,2018-01-01T00:00:00,3621
+Numărul de înnoptări anuale ale turiștilor Vilă turistică,2019-01-01T00:00:00,5384
+Numărul de înnoptări anuale ale turiștilor Pensiuni agroturistice,2014-01-01T00:00:00,370
+Numărul de înnoptări anuale ale turiștilor Pensiuni agroturistice,2015-01-01T00:00:00,2568
+Numărul de înnoptări anuale ale turiștilor Pensiuni agroturistice,2016-01-01T00:00:00,1292
+Numărul de înnoptări anuale ale turiștilor Pensiuni agroturistice,2017-01-01T00:00:00,714
+Numărul de înnoptări anuale ale turiștilor Pensiuni agroturistice,2018-01-01T00:00:00,817
+Numărul de înnoptări anuale ale turiștilor Pensiuni agroturistice,2019-01-01T00:00:00,606
+Numărul de înnoptări anuale ale turiștilor Camping,2001-01-01T00:00:00,12085
+Numărul de înnoptări anuale ale turiștilor Camping,2002-01-01T00:00:00,9742
+Numărul de înnoptări anuale ale turiștilor Camping,2003-01-01T00:00:00,8733
+Numărul de înnoptări anuale ale turiștilor Camping,2004-01-01T00:00:00,11371
+Numărul de înnoptări anuale ale turiștilor Camping,2005-01-01T00:00:00,10359
+Numărul de înnoptări anuale ale turiștilor Camping,2006-01-01T00:00:00,11754
+Numărul de înnoptări anuale ale turiștilor Camping,2007-01-01T00:00:00,14754
+Numărul de înnoptări anuale ale turiștilor Camping,2008-01-01T00:00:00,11773
+Numărul de înnoptări anuale ale turiștilor Camping,2009-01-01T00:00:00,8462
+Numărul de înnoptări anuale ale turiștilor Camping,2010-01-01T00:00:00,5213
+Numărul de înnoptări anuale ale turiștilor Camping,2011-01-01T00:00:00,5944
+Numărul de înnoptări anuale ale turiștilor Camping,2012-01-01T00:00:00,5167
+Numărul de înnoptări anuale ale turiștilor Camping,2013-01-01T00:00:00,4388
+Numărul de înnoptări anuale ale turiștilor Camping,2014-01-01T00:00:00,97
+Numărul de înnoptări anuale ale turiștilor Camping,2015-01-01T00:00:00,231
+Numărul de înnoptări anuale ale turiștilor Camping,2017-01-01T00:00:00,693
+Numărul de înnoptări anuale ale turiștilor Camping,2018-01-01T00:00:00,1046
+Numărul de înnoptări anuale ale turiștilor Camping,2019-01-01T00:00:00,734
+Numărul de înnoptări anuale ale turiștilor Pensiuni turistice,2001-01-01T00:00:00,10200
+Numărul de înnoptări anuale ale turiștilor Pensiuni turistice,2002-01-01T00:00:00,13438
+Numărul de înnoptări anuale ale turiștilor Pensiuni turistice,2003-01-01T00:00:00,14841
+Numărul de înnoptări anuale ale turiștilor Pensiuni turistice,2004-01-01T00:00:00,25551
+Numărul de înnoptări anuale ale turiștilor Pensiuni turistice,2005-01-01T00:00:00,29706
+Numărul de înnoptări anuale ale turiștilor Pensiuni turistice,2006-01-01T00:00:00,40567
+Numărul de înnoptări anuale ale turiștilor Pensiuni turistice,2007-01-01T00:00:00,47362
+Numărul de înnoptări anuale ale turiștilor Pensiuni turistice,2008-01-01T00:00:00,59002
+Numărul de înnoptări anuale ale turiștilor Pensiuni turistice,2009-01-01T00:00:00,45480
+Numărul de înnoptări anuale ale turiștilor Pensiuni turistice,2010-01-01T00:00:00,49825
+Numărul de înnoptări anuale ale turiștilor Pensiuni turistice,2011-01-01T00:00:00,53159
+Numărul de înnoptări anuale ale turiștilor Pensiuni turistice,2012-01-01T00:00:00,62485
+Numărul de înnoptări anuale ale turiștilor Pensiuni turistice,2013-01-01T00:00:00,61304
+Numărul de înnoptări anuale ale turiștilor Pensiuni turistice,2014-01-01T00:00:00,62042
+Numărul de înnoptări anuale ale turiștilor Pensiuni turistice,2015-01-01T00:00:00,72522
+Numărul de înnoptări anuale ale turiștilor Pensiuni turistice,2016-01-01T00:00:00,77892
+Numărul de înnoptări anuale ale turiștilor Pensiuni turistice,2017-01-01T00:00:00,83013
+Numărul de înnoptări anuale ale turiștilor Pensiuni turistice,2018-01-01T00:00:00,85540
+Numărul de înnoptări anuale ale turiștilor Pensiuni turistice,2019-01-01T00:00:00,89514
+Numărul de înnoptări anuale ale turiștilor Tabere de elevi si prescolari,2014-01-01T00:00:00,642
+Numărul de înnoptări anuale ale turiștilor Tabere de elevi si prescolari,2015-01-01T00:00:00,2125
+Numărul de înnoptări anuale ale turiștilor Tabere de elevi si prescolari,2016-01-01T00:00:00,2064
+Numărul de înnoptări anuale ale turiștilor Tabere de elevi si prescolari,2017-01-01T00:00:00,2871
+Numărul de înnoptări anuale ale turiștilor Tabere de elevi si prescolari,2018-01-01T00:00:00,1891
+Numărul de înnoptări anuale ale turiștilor Hotel pentru tineret,2001-01-01T00:00:00,2808
+Numărul de înnoptări anuale ale turiștilor Hotel pentru tineret,2002-01-01T00:00:00,2664
+Numărul de înnoptări anuale ale turiștilor Hotel pentru tineret,2003-01-01T00:00:00,705
+Numărul de înnoptări anuale ale turiștilor Hotel pentru tineret,2004-01-01T00:00:00,1545
+Numărul de înnoptări anuale ale turiștilor Hotel pentru tineret,2005-01-01T00:00:00,3748
+Numărul de înnoptări anuale ale turiștilor Hotel pentru tineret,2006-01-01T00:00:00,4175
+Numărul de înnoptări anuale ale turiștilor Hotel pentru tineret,2007-01-01T00:00:00,3725
+Numărul de înnoptări anuale ale turiștilor Hotel pentru tineret,2008-01-01T00:00:00,4172
+Durata medie de ședere,2001-01-01T00:00:00,"1,88"
+Durata medie de ședere,2002-01-01T00:00:00,"1,77"
+Durata medie de ședere,2003-01-01T00:00:00,"1,84"
+Durata medie de ședere,2004-01-01T00:00:00,"1,94"
+Durata medie de ședere,2005-01-01T00:00:00,"1,91"
+Durata medie de ședere,2006-01-01T00:00:00,"1,93"
+Durata medie de ședere,2007-01-01T00:00:00,"1,72"
+Durata medie de ședere,2008-01-01T00:00:00,"1,8"
+Durata medie de ședere,2009-01-01T00:00:00,"1,78"
+Durata medie de ședere,2010-01-01T00:00:00,"1,88"
+Durata medie de ședere,2011-01-01T00:00:00,"1,84"
+Durata medie de ședere,2012-01-01T00:00:00,"1,91"
+Durata medie de ședere,2013-01-01T00:00:00,"2,03"
+Durata medie de ședere,2014-01-01T00:00:00,"2,05"
+Durata medie de ședere,2015-01-01T00:00:00,"2,07"
+Durata medie de ședere,2016-01-01T00:00:00,"2,13"
+Durata medie de ședere,2017-01-01T00:00:00,"2,05"
+Durata medie de ședere,2018-01-01T00:00:00,"2,23"
+Durata medie de ședere,2019-01-01T00:00:00,"2,18"

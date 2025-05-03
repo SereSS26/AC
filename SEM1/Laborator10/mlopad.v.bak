@@ -1,0 +1,59 @@
+module mlopadd (
+    input clk,
+    input rst_b,
+    output reg [13:0] a // Suma maxim? este 10.000, a?a c? avem nevoie de 14 bi?i
+);
+
+reg [6:0] i; // Contorul pentru valori de la 0 la 99 (7 bi?i pentru a reprezenta 100 valori)
+
+// Proces secven?ial care ruleaz? la fiecare ceas
+always @(posedge clk or negedge rst_b) begin
+    if (!rst_b) begin
+        a <= 0;      // Resetare sum?
+        i <= 0;      // Resetare contor
+    end else if (i < 100) begin
+        a <= a + (2 * i + 1);  // Adun?m termenul curent la sum?
+        i <= i + 1;            // Increment?m contorul
+    end
+end
+
+endmodule
+
+module mlopadd_tb;
+
+reg clk;
+reg rst_b;
+wire [13:0] a; // Suma calculat?
+
+// Instan?ierea modulului mlopadd
+mlopadd uut (
+    .clk(clk),
+    .rst_b(rst_b),
+    .a(a)
+);
+
+// Generare semnal ceas (clock)
+    initial begin
+        clk = 0;
+        repeat (62) begin   // Se genereaz? 100 de tranzi?ii de ceas (50 cicluri de ceas)
+            #50 clk = ~clk;
+        end
+    end
+
+// Testare ?i resetare
+initial begin
+    // Resetare ini?ial?
+    rst_b = 0;
+    #25;
+    rst_b = 1;
+
+    // A?tept?m pân? când suma se calculeaz? complet
+end
+
+// Monitorizare variabile
+initial begin
+    $monitor("Timpul: %0t | Suma: %d", $time, a);
+end
+
+endmodule
+

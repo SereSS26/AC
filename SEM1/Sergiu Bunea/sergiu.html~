@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Populație Sortată după Vârstă</title>
+  <script src="https://cdn.jsdelivr.net/npm/arquero@4.8.4/dist/arquero.min.js"></script>
+
+</head>
+<body>
+  <h2>Populația Sortată după Vârstă</h2>
+  <ul id="population-list"></ul>
+
+  <script>
+    // Definirea datelor de populație
+    const population = [ 
+      {year: 1850, age: 0, sex: 1, people: 1483789},
+      {year: 1850, age: 0, sex: 2, people: 1450376},
+      {year: 1850, age: 5, sex: 1, people: 1411067},
+      {year: 1850, age: 5, sex: 2, people: 1359668},
+      {year: 1850, age: 10, sex: 1, people: 1260099},
+      {year: 1850, age: 10, sex: 2, people: 1216114},
+      {year: 1850, age: 15, sex: 1, people: 1077133},
+      {year: 1850, age: 15, sex: 2, people: 1110619},
+      {year: 1850, age: 20, sex: 1, people: 1017281},
+      {year: 1850, age: 20, sex: 2, people: 1003841},
+    ];
+
+    // Conversia datelor în tabel folosind Arquero
+    const populationTable = aq.from(population);
+
+    // Filtrare pentru anul 1850 și sortare descrescătoare după numărul de persoane
+    const tidyPopulation = populationTable
+      .filter(d => d.year === 1850) // Filtrare pentru anul 1850
+      .orderBy(aq.desc('people'))   // Sortare descrescătoare după populație
+      .view(); // Vizualizare tabel filtrat
+
+	console.log(tidyPopulation.objects());
+	
+    // Afișarea datelor în lista HTML
+    const list = document.getElementById('population-list');
+    tidyPopulation.objects().forEach(person => {
+      const listItem = document.createElement('li');
+      listItem.textContent = `Anul: ${person.year}, Vârsta: ${person.age}, Sex: ${person.sex}, Populație: ${person.people}`;
+      list.appendChild(listItem);
+    });
+  </script>
+</body>
+</html>

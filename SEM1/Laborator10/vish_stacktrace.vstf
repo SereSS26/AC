@@ -1,0 +1,20 @@
+# Current time Mon Oct 21 19:36:19 2024
+# ModelSim Stack Trace
+# Program = vish
+# Id = "6.5b"
+# Version = "2009.10"
+# Date = "Oct  1 2009"
+# Platform = linuxle
+# 0    0x0815f930: 'treew_TriggerEventQ + 0x40' in '/opt/modelsim/bin/../linux/vish'
+# 1    0x08113143: 'name_ValueCancelPendingEvents + 0xb3' in '/opt/modelsim/bin/../linux/vish'
+# 2    0x0836341c: 'TclServiceIdle + 0x48' in '/opt/modelsim/bin/../linux/vish'
+# 3    0x08355b29: 'Tcl_DoOneEvent + 0x1ad' in '/opt/modelsim/bin/../linux/vish'
+# 4    0x0827f90d: 'Tk_MainLoop + 0x19' in '/opt/modelsim/bin/../linux/vish'
+# 5    0x08286ae0: 'Tk_MainEx + 0x298' in '/opt/modelsim/bin/../linux/vish'
+# 6    0x08147aa8: 'vish_inner_loop + 0x238' in '/opt/modelsim/bin/../linux/vish'
+# 7    0x081484f4: 'main + 0x5b4' in '/opt/modelsim/bin/../linux/vish'
+# 8    0xf7b0e514: '_libc_init_first + 0x84' in '/lib/i386-linux-gnu/libc.so.6'
+# 9    0x00000027: '<unknown (@0x27)>'
+# 10   0xf7ff0d3b: '<unknown (@0xf7ff0d3b)>'
+# End of Stack Trace
+

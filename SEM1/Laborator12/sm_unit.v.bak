@@ -1,0 +1,19 @@
+module sm_unit (
+	input clk, rst_b, bgn, [7:0] ibus,
+	output fin, [7:0] obus
+);
+  //implementation here
+endmodule
+
+module sm_unit_tb;
+    reg clk, rst_b, bgn; reg [7:0] ibus; wire fin; wire [7:0] obus;
+
+    sm_unit test (.clk(clk), .rst_b(rst_b), .bgn(bgn), .ibus(ibus),
+        .fin(fin), .obus(obus));
+    localparam CLK_PERIOD=100, CLK_CYCLES=17, RST_PULSE=25;
+    localparam X=8'b10010111/*=-23*2^(-7)*/, Y=8'b10000011;/*=-3*2^(-7)*/
+    initial begin clk=1'd0; repeat (CLK_CYCLES*2) #(CLK_PERIOD/2) clk=~clk; end
+    initial begin rst_b=1'd0; #(RST_PULSE); rst_b=1'd1; end
+    initial begin bgn=1'd1; #200; bgn=1'd0; end
+    initial begin ibus=0; #100 ibus=X; #100 ibus=Y; end
+endmodule

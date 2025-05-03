@@ -1,0 +1,77 @@
+module cons (
+    input wire clk,         // Semnal de ceas
+    input wire rst_b,      // Reset activ pe nivel sc?zut
+    input wire val,        // Semnal valid de la produc?tor
+    input wire [7:0] data, // Date de la produc?tor
+    output reg [7:0] sum   // Suma secven?elor valide
+);
+
+    reg [7:0] last_data;  // Ultima dat? valid?
+
+    // Ini?ializare
+    initial begin
+        sum = 0;            // Ini?ializarea sumei
+        last_data = 0;      // Ini?ializarea ultimei date
+    end
+
+    // Logica consumatorului
+    always @(posedge clk or negedge rst_b) begin
+        if (!rst_b) begin
+            sum <= 0;        // Resetarea sumei
+            last_data <= 0;  // Resetarea ultimei date
+        end else if (val) begin
+            // Verificarea dac? datele sunt parte a unei secven?e monoton cresc?toare
+            if (data >= last_data) begin
+                sum <= sum + data; // Ad?ugarea datei la sum?
+                last_data <= data;  // Actualizarea ultimei date
+            end
+        end
+    end
+endmodule
+
+module cons_tb;
+
+    // Semnalele de testare
+    reg clk;              // Semnal de ceas
+    reg rst_b;           // Semnal de reset (activ pe nivel sc?zut)
+    wire val;            // Semnal valid de la produc?tor
+    wire [7:0] data;     // Ie?ire de date de la produc?tor
+    wire [7:0] sum;      // Ie?ire sum? de la consumator
+
+    // Instan?ierea modulului produc?tor
+    prod producer (
+        .clk(clk),
+        .rst_b(rst_b),
+        .val(val),
+        .data(data)
+    );
+
+    // Instan?ierea modulului consumator
+    cons consumer (
+        .clk(clk),
+        .rst_b(rst_b),
+        .val(val),
+        .data(data),
+        .sum(sum)
+    );
+
+    localparam CLK_PERIOD = 100;
+    localparam RUNNING_CYCLES = 100;
+    initial begin
+        clk = 1'd0;
+        repeat (2*RUNNING_CYCLES) #(CLK_PERIOD/2) clk = ~clk;
+    end
+    
+    localparam RST_DURATION = 25;
+    initial begin
+      rst_b = 1'd0;
+      #RST_DURATION rst_b = 1'd1;
+    end
+
+    initial begin
+        $monitor("La timpul %t: val=%b, data=%h, sum=%d", $time, val, data, sum);
+    end
+
+endmodule
+
+

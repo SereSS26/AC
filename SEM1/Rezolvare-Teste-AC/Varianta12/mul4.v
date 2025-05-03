@@ -1,0 +1,27 @@
+module mul4(
+  input [1:0] i,
+  output reg [3:0] o
+);
+  integer k;
+  always @(*) begin
+    k=i*i;
+    o=k;
+  end
+    
+endmodule
+
+module mul4_tb;
+  reg [1:0] i;
+  wire [3:0] o;
+
+  mul4 uut (.i(i), .o(o));
+
+  integer k;
+  initial begin
+    $display("Time\ti\t\to");
+    $monitor("%0t\t%b(%2d)\t%b", $time, i, i, o);
+    i = 0;
+    for (k = 1; k < 4; k = k + 1)
+      #10 i = k;
+  end
+endmodule

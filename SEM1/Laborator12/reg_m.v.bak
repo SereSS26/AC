@@ -1,0 +1,117 @@
+module reg_q (
+    input wire clk,             // Semnal de ceas
+    input wire rstb,            // Semnal de reset asincron
+    input wire clr_lsb,         // Clear pentru cel mai pu?in semnificativ bit
+    input wire ld_ibus,         // Semnal pentru înc?rcarea intr?rii
+    input wire ld_obus,         // Semnal pentru înc?rcarea ie?irii
+    input wire shr,             // Semnal de shift la dreapta
+    input wire shi,             // Semnal de shift la stânga
+    input wire [7:0] ibus,      // Intrare de 8 bi?i
+    output reg [7:0] obus,      // Ie?ire de 8 bi?i
+    output reg [7:0] q          // Registrul Q
+);
+    always @(posedge clk or negedge rstb) begin
+        if (!rstb) begin
+            q <= 8'b0;          // Reset registrul Q la 0
+            obus <= 8'b0;       // Reset ie?irea la 0
+        end else if (clr_lsb) begin
+            q[0] <= 1'b0;       // Clear LSB
+        end else if (ld_ibus) begin
+            q <= ibus;          // Înc?rc?m registrul cu intrarea
+        end else if (shr) begin
+            q <= {1'b0, q[7:1]}; // Shift la dreapta
+        end else if (shi) begin
+            q <= {q[6:0], 1'b0}; // Shift la stânga
+        end
+    end
+
+    always @(*) begin
+        // Scrierea în obus când ld_obus este activ
+        obus = (ld_obus) ? q : 8'bz;  // Ie?irea Q se scrie în obus
+    end
+endmodule
+
+module reg_q_tb;
+    reg clk;
+    reg rstb;
+    reg clr_lsb;
+    reg ld_ibus;
+    reg ld_obus;
+    reg shr;
+    reg shi;
+    reg [7:0] ibus;
+    wire [7:0] obus;
+    wire [7:0] q;
+
+    // Instan?ierea modulului
+    reg_q uut (
+        .clk(clk),
+        .rstb(rstb),
+        .clr_lsb(clr_lsb),
+        .ld_ibus(ld_ibus),
+        .ld_obus(ld_obus),
+        .shr(shr),
+        .shi(shi),
+        .ibus(ibus),
+        .obus(obus),
+        .q(q)
+    );
+
+    // Generarea semnalului de ceas
+    initial begin
+        clk = 0; // Ini?ializ?m clk la 0
+        repeat (20) begin
+            #10 clk = ~clk; // Toggle clk dup? 10 unit??i de timp
+        end
+    end
+
+    // Generarea semnalelor de test
+    initial begin
+        // Ini?ializare
+        rstb = 0;
+        clr_lsb = 0;
+        ld_ibus = 0;
+        ld_obus = 0;
+        shr = 0;
+        shi = 0;
+        ibus = 8'b00001111; // Valoare de test
+
+        // Test 1: Reset
+        #15;
+        rstb = 1; // Activez resetul
+        #20;
+
+        // Test 2: Înc?rcare ibus în q
+        ld_ibus = 1;
+        #15;
+        ld_ibus = 0; // Dezactivez înc?rcarea
+
+        // Test 3: Clear LSB
+        clr_lsb = 1;
+        #15;
+        clr_lsb = 0; // Dezactivez clear
+
+        // Test 4: Shift la dreapta
+        shr = 1;
+        #15;
+        shr = 0; // Dezactivez shift
+
+        // Test 5: Shift la stânga
+        shi = 1;
+        #15;
+        shi = 0; // Dezactivez shift
+
+        // Test 6: Scriere în obus
+        ld_obus = 1;
+        #15;
+        ld_obus = 0; // Dezactivez scrierea
+
+        // Finalizare simulare
+    end
+
+    // Monitorizarea ie?irilor
+    initial begin
+        $monitor("Time: %0t | Reset: %b | LSB Clear: %b | Load ibus: %b | Load obus: %b | Shift R: %b | Shift L: %b | ibus: %b | obus: %b | Q: %b", 
+                 $time, rstb, clr_lsb, ld_ibus, ld_obus, shr, shi, ibus, obus, q);
+    end
+endmodule

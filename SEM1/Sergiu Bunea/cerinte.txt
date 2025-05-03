@@ -1,0 +1,55 @@
+Tema1: Please choose a dataset from https://data.primariatm.ro/dataset/ or from https://data.gov.ro/
+Use the visual programming and data analysis tool Orange3 to load the dataset and to visually inspect the dataset using the widgets from Visualize in Orange3.
+
+Tema2: Upload 3 plots with different visualizations and statistics about the dataset.
+
+Using the same dataset as for the previous assignment, please implement the visual programming flow of the 7 models presented in the course slides and upload the plots with the evaluation score, the confusion matrix and the ROC AUC curve.
+
+Tema3: Please check the https://observablehq.com/@cse412/cse-412-section-1-data-wrangling, last Practice section.
+
+How will you transform the population dataset to answer your question? Are the transformation operations different from how we transformed the cars dataset?
+
+Tema4: Please use your dataset from https://data.primariatm.ro/dataset/ or https://data.gov.ro/ and display a proper visualization for it in a simple webpage (html) using Observable and D3.JS gallery (following the example from the course).
+
+The D3 gallery is here: https://observablehq.com/@d3/gallery?collection=@observablehq/observable-libraries-for-visualization and the embedding in a webpage of your dataset visualization is here https://observablehq.com/@observablehq/embeds 
+
+Tema 1: Încărcarea și Inspecția Vizuală a Datasetului în Orange3
+Selectează un set de date de pe data.primariatm.ro sau data.gov.ro. Descarcă setul de date în format CSV (sau alt format compatibil).
+Deschide Orange3 și folosește widget-ul File pentru a încărca setul de date.
+Inspecția vizuală:
+Utilizează widget-uri din categoria Visualize din Orange3, cum ar fi:
+Data Table – pentru a explora datele în formă tabelară.
+Box Plot – pentru a observa distribuția variabilelor numerice.
+Scatter Plot – pentru a vedea relațiile între variabile numerice.
+Histogram – pentru a analiza distribuția variabilelor individuale.
+Explorează caracteristicile și relațiile între variabile pentru a avea o înțelegere de bază a datasetului.
+
+Tema 2: Generarea Vizualizărilor și Statisticilor
+Crează 3 plot-uri diferite folosind widget-urile din Orange3:
+
+Scatter Plot pentru analiza relațiilor dintre două variabile numerice.
+Box Plot pentru distribuția unei variabile numerice față de o variabilă categorică.
+Pie Chart sau Histogram pentru a ilustra proporțiile diferitelor categorii sau distribuția unei singure variabile.
+După ce ai generat graficele, salvează-le ca imagini (în format PNG sau JPEG) pentru a le include în tema.
+
+Modele de Machine Learning:
+
+Folosește același dataset și implementează 7 modele de ML (cum ar fi: KNN, SVM, Logistic Regression, Naive Bayes, Decision Tree, Random Forest și Neural Network) utilizând widget-urile din Orange3.
+Folosește widget-ul Test & Score pentru a evalua scorurile modelelor și pentru a obține metrici precum ROC AUC, matricea de confuzie și scorul de acuratețe.
+Salvează graficele pentru scorurile de evaluare, matricea de confuzie și curba ROC AUC pentru fiecare model.
+
+Tema 3: Transformarea Datasetului pentru Analiză în Observable
+Urmărește exemplele de transformare din secțiunea de practică CSE 412 - Data Wrangling.
+Alege o întrebare specifică pentru care vei transforma datasetul de populație. De exemplu: „Care este evoluția populației în ultimii 10 ani?”
+Transformă datasetul utilizând operațiuni precum filtrare, agregare, sortare sau alte prelucrări necesare pentru a răspunde la întrebare. Verifică dacă aceste operațiuni sunt similare sau diferite de cele aplicate asupra datasetului cu mașini.
+
+Tema 4: Vizualizare Interactivă a Datasetului în HTML cu Observable și D3.js
+Selectează un set de date din data.primariatm.ro sau data.gov.ro pe care să îl vizualizezi.
+Construiește vizualizarea în Observable folosind exemplul din curs.
+Folosește un grafic adecvat pentru tipul de date (de exemplu, Line Chart pentru date de-a lungul timpului sau Bar Chart pentru categorii).
+Poți explora galeria D3.js pentru exemple.
+Integrarea vizualizării într-o pagină HTML:
+După ce ai creat vizualizarea în Observable, urmează pașii din ghidul de embed din Observable pentru a o încorpora într-o pagină HTML.
+Creează un fișier HTML simplu, importă vizualizarea din Observable, și asigură-te că aceasta este vizibilă și funcționează corespunzător în browser.
+
+

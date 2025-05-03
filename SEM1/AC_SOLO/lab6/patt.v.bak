@@ -1,0 +1,127 @@
+`define S0 3'b000
+`define S1 3'b001
+`define S2 3'b010
+`define S3 3'b011
+`define S4 3'b100
+`define S5 3'b101
+`define S6 3'b110
+
+module patt(
+  input clk,rst,
+  input i,
+  output reg o
+  );
+
+reg[2:0]state_reg,state_next;
+
+always@(posedge clk or negedge rst)begin
+  if(rst==0)
+    state_reg<=`S0;
+  else
+    state_reg<=state_next;
+  
+end
+
+always @(*) begin
+  state_next=state_reg;
+  o=0;
+  case(state_reg)
+    `S0:begin
+    if(i==1) 
+      state_next=`S1;
+    else
+      state_next=`S0;
+    end
+    `S1:begin
+      if(i==0)
+      state_next=`S2;
+    else
+      state_next=`S1;
+    end
+    
+    `S2:begin
+      if(i==1)
+      state_next=`S3;
+    else
+      state_next=`S0;
+    end
+    
+    `S3:begin
+      if(i==1)
+      state_next=`S4;
+    else
+      state_next=`S2;
+    end
+    
+    `S4:begin
+      o=1;
+      if(i==0)
+      state_next=`S5;
+    else
+      state_next=`S1;
+    end
+   `S5: begin
+     if(i)
+       state_next=`S6;
+      else
+        state_next=`S0;
+      end
+      `S6: begin
+      if(i) begin
+        o = 1;  
+        state_next=`S1;  
+      end
+      else
+        state_next=`S0;
+    end
+      
+    endcase
+end
+endmodule
+
+
+`timescale 1ns / 1ps
+
+module patt_tb;
+  reg clk;
+  reg rst;
+  reg i;
+  wire o;
+
+patt uut(
+  .clk(clk),
+  .rst(rst),
+  .i(i),
+  .o(o)
+  );
+
+always begin
+    #50 clk=~clk;
+  end
+
+initial begin
+clk=0;
+rst=0;
+i=0;
+
+#25;
+rst=1; 
+
+#100 i=1;
+#100 i=0;
+#100 i=1;
+#100 i=1;
+#100 i=0;
+#100 i=1;
+#100 i=1;
+#100 i=0;
+#100 i=0;
+       
+ #500
+  $finish;
+end
+initial begin
+        $monitor(" i: %b | o: %b | Current State: %b",  i, o, uut.state_reg);
+    end
+
+endmodule

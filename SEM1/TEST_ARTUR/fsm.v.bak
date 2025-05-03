@@ -1,0 +1,87 @@
+module fsm(
+  input clk, rst_b, act, fast,
+  output dclk
+);
+
+localparam S0 = 0;
+localparam S1 = 1;
+localparam S2 = 2;
+localparam S3 = 3;
+localparam S4 = 4;
+localparam S5 = 5;
+
+
+reg [3:0] st;
+wire [3:0] st_nxt;
+
+assign st_nxt[S1]=((st[S1]&act)|(st[S0]));
+assign st_nxt[S2]=((st[S1]&~act)|(st[S2]&act));
+assign st_nxt[S3]=((st[S2]&~act)|(st[S3]&~fast)|(st[S5]&~fast));
+assign st_nxt[S4]=((st[S4]&fast));
+assign st_nxt[S5]=((st[S4]&fast)|(st[S3]&~fast));
+
+
+
+always @(posedge clk or negedge rst_b) begin
+  if(rst_b == 0) begin
+    st <= 0;
+    st[S0] <= 1;
+  end
+  else
+    st <= st_nxt;
+end
+
+endmodule
+
+module fsm_tb;
+reg clk, rst_b, act, fast;
+wire dclk;
+
+fsm uut(
+  .clk(clk),
+  .rst_b(rst_b),
+  .act(act),
+  .fast(fast),
+  .dclk(dclk)
+);
+
+initial begin
+  clk = 0;
+  rst_b = 0;
+  act = 0;
+  fast = 0;
+end
+
+integer i;
+initial begin
+  for(i = 1; i <= 16; i = i + 1) begin
+    #50; clk = ~clk;
+  end
+end
+
+initial begin
+  #25; rst_b = 1;
+end
+
+initial begin
+  #200; act = 1;
+  #500; act = 0;
+end
+
+initial begin
+  #50; fast = 1;
+  #150; fast = 0;
+  #150; fast = 1;
+  #100; fast = 0;
+  #100; fast = 1;
+  #200; fast = 0;
+  #50; fast = 1;
+end
+
+initial begin
+    $monitor("Timp: %t | clk: %b | rst_b: %b | act: %b | fast: %b | dclk: %b ", $time, clk, rst_b, act, ,fast, dclk);
+  end
+
+endmodule
+  
+  

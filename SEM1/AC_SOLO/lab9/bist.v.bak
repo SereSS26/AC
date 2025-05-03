@@ -1,0 +1,120 @@
+module lfsr5b(
+  input clk,        
+  input rst_b,              
+  output reg [4:0]q 
+  );
+  
+  reg [4:0]ff;
+  
+  always @(posedge clk or negedge rst_b) begin
+    if(rst_b==0) begin
+      ff<=5'b00001;
+    end
+  else
+    begin
+      ff[0]<=ff[4];
+      ff[1]<=ff[0];
+      ff[2]<=ff[4]^ff[1];
+      ff[3]<=ff[2];
+      ff[4]<=ff[3];
+  end
+end
+
+always@(*) begin
+  q=ff;
+end
+   
+endmodule
+
+
+module check(
+  input [4:0]i,
+  output reg o
+  );
+  integer j=0;
+  always@(*) begin
+    o=0;
+   for(j=1;j<9;j=j+1) begin
+    if(i==(j*4-3)) begin
+      o=1;
+    end
+ end
+end
+endmodule
+
+
+module sisr4b(
+  input clk,        
+  input rst_b, 
+  input i,                     
+  output reg [3:0]q 
+  );
+  
+
+  
+  always @(posedge clk or negedge rst_b) begin
+    if(rst_b==0) begin
+      q<=4'b0000;
+    end
+  else
+    begin
+      q[0]<=i^q[3];
+      q[1]<=q[0]^q[3];
+      q[2]<=q[1];
+      q[3]<=q[2];
+      
+  end
+end
+endmodule
+
+`timescale 1ns/1ps
+
+module lfsr5b_tb;
+reg clk;
+reg rst_b;
+wire [4:0]q;
+
+reg i;
+wire o;
+wire [3:0]q2;
+
+lfsr5b uut1(
+ .clk(clk),
+ .rst_b(rst_b),
+ .q(q)
+);
+
+check uut2(
+  .i(q),
+  .o(o)
+);
+
+sisr4b uut3(
+ .i(o),
+ .clk(clk),
+ .rst_b(rst_b),
+ .q(q2)
+);
+
+always begin
+  #50 clk=~clk;
+end
+
+initial begin
+  clk=0;
+  rst_b=0;
+  
+  #25 rst_b=1;
+  
+  #1000
+$finish;
+end
+endmodule
+
+
+
+
+
+
+
+

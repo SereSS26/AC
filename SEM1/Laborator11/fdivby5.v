@@ -1,0 +1,84 @@
+module fdivby5(
+  input clk,
+  input rst_b,
+  input clr,
+  input c_up,
+  output reg fdclk
+  );
+  
+  reg q0,q1,q2;
+
+  wire d0,d1,d2;
+  wire clr_out;
+
+  assign d0=~q0;
+  assign d1=q0^q1;
+  assign d2=q2^(q1&q0);
+  
+  assign clr_out = clr & q2;
+
+  always @(posedge clk or negedge rst_b) begin
+    if (rst_b==0) begin
+      q0 <= 0;
+      q1 <= 0;
+      q2 <= 0;
+    end else if (clr_out) begin
+      q0 <= 0;
+      q1 <= 0;
+      q2 <= 0;
+    end else if (c_up) begin
+      q0 <= d0;
+      q1 <= d1;
+      q2 <= d2;
+    end
+  end
+  always @(*) begin
+    fdclk = ~(q0 | q1 | q2);
+  end
+
+endmodule
+
+module fdivby5_tb;
+  reg clk;
+  reg rst_b;
+  reg clr;
+  reg c_up;
+  wire fdclk;
+
+  fdivby5 uut (
+    .clk(clk),
+    .rst_b(rst_b),
+    .clr(clr),
+    .c_up(c_up),
+    .fdclk(fdclk)
+  );
+
+  localparam CLK_PERIOD = 100;
+    localparam RUNNING_CYCLES = 50;
+    initial begin
+        clk = 1'd0;
+        repeat (2*RUNNING_CYCLES) #(CLK_PERIOD/2) clk = ~clk;
+    end
+    
+    localparam RST_DURATION = 25;
+    initial begin
+      rst_b = 1'd0;
+      #RST_DURATION rst_b = 1'd1;
+    end
+
+  initial begin
+    clr = 0;
+    c_up = 0;
+    #100;
+    c_up = 1;
+    #400;
+    clr = 1;
+    #100 
+    clr = 0;
+  end
+  
+  initial begin
+    $monitor("Timp: %t | fdclk: %b | rst_b: %b | clr: %b | c_up: %b", $time, fdclk, rst_b, clr, c_up);
+  end
+  
+endmodule

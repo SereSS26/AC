@@ -1,0 +1,31 @@
+module reg_q (
+    input wire clk,             
+    input wire rstb,            
+    input wire clr_lsb,         
+    input wire ld_ibus,         
+    input wire ld_obus,         
+    input wire shr,             
+    input wire shi,             
+    input wire [7:0] ibus,      
+    output reg [7:0] obus,      
+    output reg [7:0] q          
+);
+    always @(posedge clk or negedge rstb) begin
+        if (!rstb) begin
+            q <= 8'b0;          
+            obus <= 8'b0;      
+        end else if (clr_lsb) begin
+            q[0] <= 1'b0;       
+        end else if (ld_ibus) begin
+            q <= ibus;          
+        end else if (shr) begin
+            q <= {1'b0, q[7:1]}; // Shift la dreapta
+        end else if (shi) begin
+            q <= {q[6:0], 1'b0}; // Shift la stânga
+        end
+    end
+
+    always @(*) begin
+        obus = (ld_obus) ? q : 8'bz;  // Iesirea Q se scrie în obus
+    end
+endmodule

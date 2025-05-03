@@ -1,0 +1,31 @@
+module check(
+  input [4:0]i,
+  output reg o
+  );
+  integer j=0;
+  always@(*) begin
+    o=0;
+   for(j=1;j<9;j=j+1)
+    if(i==(j*4-3)) begin
+      o=1;
+    end
+ end
+end
+endmodule
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

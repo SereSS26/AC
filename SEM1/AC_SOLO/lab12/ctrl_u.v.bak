@@ -1,0 +1,92 @@
+`define S0 3'b000
+`define S1 3'b001
+`define S2 3'b010
+`define S3 3'b011
+`define S4 3'b100
+`define S5 3'b101
+`define S6 3'b110
+`define S7 3'b111
+
+module ctrl_u(
+  input clk, rst_b, bgn, q_0, cnt_7,
+  output c0, c1, c2, c3, c4, c5, c6, fin
+);
+  reg [2:0] cur_state,next_state;
+  
+always@(posedge clk or negedge rst_b) begin
+  if(rst_b==0) begin
+    cur_state<=`S0;
+  end
+  else begin
+    cur_state<=next_state;
+    end
+    
+end
+
+always@(*) begin
+c0=0; c1=0; c2=0; c3=0; c4=0; c5=0; c6=0; fin=0;
+
+case(cur_state)
+  `S0: begin
+    if(bgn) begin
+      next_state=`S1;
+      end
+      else begin
+        next_state=`S0;
+        end
+      end
+      
+  `S1: begin
+    c0=1;
+    next_state=`S2;
+  end
+  
+  `S2: begin
+    c1=1;
+    if(q_0==1) begin
+      next_state=`S3;
+    end
+  else
+    begin
+      next_state=`S4;
+    end
+  end
+  
+  `S3: begin 
+    c2=1;
+    next_state=`S4;
+  end
+  
+  `S4: begin
+    c3=1;
+  if(cnt_7==0 && q_0==1) begin
+  next_state=`S3;
+  end else 
+  if(cnt_7==0 && q_0==0) begin
+    next_state=`S4;
+  end else
+  if(cnt_7==1) begin
+    next_state=`S5;
+  end
+  end
+  
+  `S5: begin
+    c4=1;
+    next_state=`S6;
+  end
+  
+  `S6: begin
+    c5=1;
+    fin=1;
+    next_state=`S7;
+  end
+  `S7: begin
+    c6=1;
+    fin=1;
+    next_state=`S0;
+  end
+  
+  
+endcase
+end
+endmodule

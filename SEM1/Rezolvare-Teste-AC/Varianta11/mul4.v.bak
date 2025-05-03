@@ -1,0 +1,17 @@
+module mul4(
+  input [3:0] i,
+  output reg o
+);
+  integer aux;
+  always @(*) begin
+    aux=i;
+    o=0;
+    while(aux>=4)
+    begin
+      aux=aux-4;
+    end
+    if(aux==0)
+      o=1;
+  end
+    
+endmodule

@@ -1,0 +1,6 @@
+module ctrl_u(
+  input clk, rst_b, bgn, q_0, cnt_is_7,
+  output c0, c1, c2, c3, c4, c5, c6, fin
+);
+  //implementation here
+endmodule

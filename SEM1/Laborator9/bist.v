@@ -1,0 +1,66 @@
+module bist (
+    input clk,      
+    input rst_b,    
+    output sig      
+);
+
+    wire [4:0] lfsr_out;  
+    wire check_out;       
+    wire [3:0] sisr_out;  
+
+    lfsr5b lfsr_inst (
+        .clk(clk),
+        .rst_b(rst_b),
+        .q(lfsr_out)
+    );
+
+    check check_inst (
+        .i(lfsr_out),
+        .o(check_out)
+    );
+
+    sisr4b sisr_inst (
+        .clk(clk),
+        .rst_b(rst_b),
+        .i(check_out),
+        .q(sisr_out)
+    );
+
+    assign sig = sisr_out[3];
+
+endmodule
+
+module bist_tb;
+
+    reg clk;
+    reg rst_b;
+    wire sig;
+
+    bist uut (
+        .clk(clk),
+        .rst_b(rst_b),
+        .sig(sig)
+    );
+
+    localparam CLK_PERIOD = 100;
+    localparam RUNNING_CYCLES = 31;
+    initial begin
+        clk = 1'd0;
+        repeat (2*RUNNING_CYCLES) #(CLK_PERIOD/2) clk = ~clk;
+    end
+    
+    localparam RST_DURATION = 25;
+    initial begin
+      rst_b = 1'd0;
+      #RST_DURATION rst_b = 1'd1;
+    end
+
+    initial begin
+            $monitor("Timp: %0t | sig = %b", $time, sig);
+    end
+    initial begin
+        $display("Valoarea semnalului sig dupa 31 de cicluri este: %b", sig);
+    end
+    
+endmodule
+

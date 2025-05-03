@@ -1,0 +1,11 @@
+module check (
+    input [4:0] i,   // Intrare pe 5 bi?i
+    output o        // Ie?ire pe 1 bit
+);
+
+    // Calcul?m dac? num?rul este de forma 4k - 3
+    assign o = (i % 4 == 1);
+
+endmodule
+
+

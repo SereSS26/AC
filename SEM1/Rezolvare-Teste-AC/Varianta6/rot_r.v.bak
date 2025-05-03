@@ -1,0 +1,29 @@
+module rot_r (
+    input [5:0] a,      
+    output [5:0] b      
+);
+    assign b = {a[1:0], a[5:2]}; 
+endmodule
+
+module rot_r_tb;
+    reg [5:0] a;        // Intrare pe 6 bi?i
+    wire [5:0] b;       // Ie?irea rotit?
+
+    // Instan?ierea modulului de testat
+    rot_r uut (
+        .a(a),
+        .b(b)
+    );
+
+    integer i;          // Variabil? pentru itera?ii
+
+    initial begin
+        $display("Time\tInput a\tOutput b"); // Afi?are antet
+        $monitor("%0t\t%b\t%b", $time, a, b); // Monitorizare simulare
+
+        for (i = 0; i < 64; i = i + 1) begin
+            a = i[5:0]; // Generarea tuturor combina?iilor pentru a
+            #10;         // Pauz? pentru simulare
+        end
+    end
+endmodule

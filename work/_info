@@ -1,0 +1,61 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/home/eda/shared
+vfac
+!s100 eI:FURT<6kfFB6V>I7Q400
+ICA[mjzidT2<QEkW=2UN1b0
+V;UCLAi]aSOnF^F:hN;k?H2
+Z1 w1744443348
+Z2 8solo.v
+Z3 Fsolo.v
+L0 3
+Z4 OV;L;6.5b;42
+r1
+!s85 0
+31
+!s101 -O0
+o-O0
+vfsm_controller
+!s100 U301@P_Wci:Hc9Y;PPN1Z1
+I@2nPQ6:F_a7GLlaieU84O3
+V<8@aSXGHQ^PdTmBT0GIZ43
+R1
+R2
+R3
+L0 42
+R4
+r1
+!s85 0
+31
+!s101 -O0
+o-O0
+vrca_9
+!s100 [^7[d8n>_EAX`i:0?JZln1
+IaC[?;TcUXPD:`cIiCACL63
+V1RLbbbU6S9lCbID1ZB:5U3
+R1
+R2
+R3
+L0 12
+R4
+r1
+!s85 0
+31
+!s101 -O0
+o-O0
+vtb_fsm_controller
+!s100 AlNb2^5`@YmEFQGIMiU^A3
+IYdAOFXi7CJP4aS<2LTWVE3
+VZRPbGmnj[]_=LI9eU>hYD3
+R1
+R2
+R3
+L0 141
+R4
+r1
+!s85 0
+31
+!s101 -O0
+o-O0

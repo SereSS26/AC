@@ -1,0 +1,89 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/home/eda/shared/Laborator12
+vctrl_u
+!s100 SgJXjJHjWiFo@Fn2><eHJ2
+IA5iP<GZmcbaK:7>BJXM9]0
+VB]D1X0m`A7DhZWdzX4:Xb0
+w1729332589
+8ctrl_u.v
+Fctrl_u.v
+L0 1
+Z1 OV;L;6.5b;42
+r1
+!s85 0
+31
+!s101 -O0
+o-O0
+vreg_a
+!s100 <4z<^c@iJU2[UcN1_cVhR1
+ILYanRnCkdb^KQ?>`@XGCb0
+Vh@CWgfH:cU5jL12ieBH]R3
+w1729332353
+8reg_a.v
+Freg_a.v
+L0 1
+R1
+r1
+!s85 0
+31
+!s101 -O0
+o-O0
+vreg_m
+!s100 LDjQzIcXLo3^I_iEiUQ@[1
+I0d9ZInecO9SX_=3dl]LAM1
+V[L[C]a_afOQPKM86^XeAJ3
+w1729330101
+8reg_m.v
+Freg_m.v
+L0 1
+R1
+r1
+!s85 0
+31
+!s101 -O0
+o-O0
+vreg_q
+!s100 WRIg9e]naiJPd_jW7?dnj3
+IAn[=N8BGI68dS98U=8]n51
+VImoh6gok`3KZFz7;9aWZ43
+w1729330837
+8reg_q.v
+Freg_q.v
+L0 1
+R1
+r1
+!s85 0
+31
+!s101 -O0
+o-O0
+vsm_unit
+!s100 cIon>Lmn_W4jWjO[>OQZX0
+IX`Wfe`FKg]QkUd8@N@XV;0
+VY@MVjPch[3ck8K_YTik7b2
+Z2 w1729333001
+Z3 8sm_unit.v
+Z4 Fsm_unit.v
+L0 1
+R1
+r1
+!s85 0
+31
+!s101 -O0
+o-O0
+vsm_unit_tb
+!s100 5:KllgGL8aY5cKYfP<:9n0
+IWPfL?SN?nE[na27g_^oTM2
+VF1e1@@>aX_[7^7Yl5>z6<2
+R2
+R3
+R4
+L0 47
+R1
+r1
+!s85 0
+31
+!s101 -O0
+o-O0

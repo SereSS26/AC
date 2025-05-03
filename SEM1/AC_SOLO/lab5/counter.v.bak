@@ -1,0 +1,67 @@
+module counter #(
+  parameter lung=8,
+  parameter init_val=8'hff
+  )(
+  input clk,               
+  input rst_b,              
+  input c_up,               
+  input clr,                
+  output reg [lung-1:0]q
+  
+  );
+  
+  always@(posedge clk or negedge rst_b)begin
+    if(!rst_b) begin
+      //reset asinc
+      q<=init_val;
+    end
+    else
+      if(clr) begin
+        q<=init_val;
+      end
+      else
+        if(c_up) begin
+          q<=q+1;
+        end
+    end
+endmodule
+
+module counter_tb;
+ reg clk;
+ reg rst_b;
+ reg c_up;
+ reg clr;
+ wire [7:0] q;
+ 
+ counter uut(
+   .clk(clk),
+   .rst_b(rst_b),
+   .c_up(c_up),
+    .clr(clr),
+    .q(q)
+    );
+    
+    
+  always begin
+    #50 clk=~clk;
+  end
+  initial begin
+    clk=0;
+    rst_b=1;
+    clr=0;
+    c_up=0;
+    
+    #10 rst_b=0;
+    #5 rst_b=1;
+    
+    #200 clr=1;
+    #100 clr=0;
+    
+    #10 c_up=1;
+    #400 c_up=0;
+    
+    #300
+    $finish;
+  end
+endmodule
+    
